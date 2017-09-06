@@ -7,7 +7,7 @@
 ---
 
 
-*The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+>*The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
 "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
 document are to be interpreted as described in *[*RFC
 2119*](http://www.ietf.org/rfc/rfc2119.txt)*.*
@@ -112,7 +112,7 @@ network/system administrator to do it for you.
 | ***Entity***   | ***HTTP*** | ***Call***                          | ***Purpose***                                                                                                                                            |
 |----------------|------------|-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Account**    | POST       | /Account/Status                     | Checks whether a user exists or not by providing the login name and the password.                                                                        |
-<td rowspan = 3> **Branch**     </td> GET        | /Branches                           | Returns the branch list.                                                                                                                                 |
+| **Branch**     | GET        | /Branches                           | Returns the branch list.                                                                                                                                 |
 |                | GET        | /Branch/:Id                         | Returns information about the branch with the associated Id.                                                                                             |
 |                | POST       | /Branch                             | Creates a branch with the requested attributes.                                                                                                          |                                    
  **Branch & User**        | PUT        | /Branch/:Id/AddUser                 | Adds a user to the specified branch. The Id in the URL, refers to the branch. The Id of the user is defined as a PUT field, in the request.              |
