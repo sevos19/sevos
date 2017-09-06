@@ -175,7 +175,7 @@ When an error has been occurred you can find into the body of the
 response some other useful information such as its code, a generic
 message and optionally a more technical reason. For a live demonstration
 of the API calls and their responses (succeed and failed) you can use
-this [tool](#ApiLive).
+this [tool](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en).
 
 | ***HTTP Status Code*** | ***Reason***                                                                                          |
 |------------------------|-------------------------------------------------------------------------------------------------------|
@@ -185,7 +185,7 @@ this [tool](#ApiLive).
 | **401**                | -   Authentication required.                                                                          |
 | **400**                | -   General HTTP status code, if the action can’t be processed.                                       |
 
-[Back to the Index](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en)
+[Back to the Index](#DocIndex)
 
 ***
 
