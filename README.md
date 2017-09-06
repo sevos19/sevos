@@ -179,8 +179,7 @@ this [tool](#ApiLive).
 |------------------------|-------------------------------------------------------------------------------------------------------|
 | **503**                | -   Service unavailable. API status is disabled.                                                      |
 | **405**                | -   Unsupported HTTP method. Only GET, POST and PUT are currently supported.                          |
-| **404**                | -   The requested API call does not exist. 
-						   -   The requested entity (User, Course, etc) which is specified for example by an Id, does not exist. |
+| **404**                | -   The requested API call does not exist. <br> -   The requested entity (User, Course, etc) which is specified for example by an Id, does not exist.|
 | **401**                | -   Authentication required.                                                                          |
 | **400**                | -   General HTTP status code, if the action can’t be processed.                                       |
 
