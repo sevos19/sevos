@@ -11,18 +11,20 @@ document are to be interpreted as described in *[*RFC
 
 ***
 
-|<a name="DocIndex"><h3>Documentation Index</h3></a>|
-|-----------------------------------------|
-| [Quick Start](#QuickStart)              |
-| [API Introduction](#ApiIntro)           |
-| [API Requirements](#ApiRequirements)    |
-| [API Call Reference](#ApiCallRef)       |
-| [API Error Handling](#ApiErrorHandling) |
-| [API Authentication](#ApiAuth)          |
-| [SDK Introduction](#SdkIntro)           |
-| [SDK Requirements](#SdkRequirements)    |
-| [SDK Installation](#SdkInstall)         |
-| [SDK Examples](#SdkExample)             |
+<a name="DocIndex"><h3>Documentation Index</h3></a>
+<table>
+	<tr><th> Table of contents						 </th></tr>
+	<tr><td> [Quick Start](#QuickStart)              </td></tr>
+	<tr><td> [API Introduction](#ApiIntro)           </td></tr>
+	<tr><td> [API Requirements](#ApiRequirements)    </td></tr>
+	<tr><td> [API Call Reference](#ApiCallRef)       </td></tr>
+	<tr><td> [API Error Handling](#ApiErrorHandling) </td></tr>
+	<tr><td> [API Authentication](#ApiAuth)          </td></tr>
+	<tr><td> [SDK Introduction](#SdkIntro)           </td></tr>
+	<tr><td> [SDK Requirements](#SdkRequirements)    </td></tr>
+	<tr><td> [SDK Installation](#SdkInstall)         </td></tr>
+	<tr><td> [SDK Examples](#SdkExample)             </td></tr>
+</table>
 
 ***
  
