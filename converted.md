@@ -29,6 +29,8 @@ document are to be interpreted as described in *[*RFC
 | [SDK Installation](#SdkInstall)         | 12  |
 | [SDK Examples](#SdkExample)             | 13  |
 
+***
+
 <a name="QuickStart"><h3>Quick Start</h3></a>
 
 In this quick start we provide you with some very basic information
@@ -211,7 +213,7 @@ Programming Language: **PHP** | Version: **2.0.0** | API Support:
 
 ***
 
-<span id="SdkRequirements" class="anchor"></span>SDK Requirements
+<a name="SdkRequirements"><h3>SDK Requirements</h3></a>
 
 If your system meets the eFront PRO's requirements, then it also meets
 the requirements of the SDK.
@@ -239,7 +241,8 @@ follow the below steps in order to work with the SDK:
 4.  Now paste the below code in the file you just create in order to
     start making calls:
 
-    `<?php
+    ```
+	<?php
 
     include ‘AutoLoader.php’;
 
@@ -257,7 +260,8 @@ follow the below steps in order to work with the SDK:
 
     $eFrontProSDK = **new** eFrontProSDK(**new** Api(new cUrl));
 
-    $eFrontProSDK-&gt;Config($apiVersion, $apiLocation, $apiKey);`
+    $eFrontProSDK-&gt;Config($apiVersion, $apiLocation, $apiKey);
+	```
 
 ***
 
