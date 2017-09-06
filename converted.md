@@ -52,7 +52,7 @@ curl -u &lt;MY\_API\_KEY&gt;:
 
 **Note**: To use JSONP, append to the endpoint
 "?callback=&lt;myCallbackName&gt;" without the quotation marks.
-
+<a name="ApiIntro">
 <span id="ApiIntro" class="anchor"></span>API Introduction
 
 eFront PRO provides a comprehensive REST JSON API that allows
