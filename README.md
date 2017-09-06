@@ -185,7 +185,7 @@ this [tool](#ApiLive).
 | **401**                | -   Authentication required.                                                                          |
 | **400**                | -   General HTTP status code, if the action can’t be processed.                                       |
 
-[Back to the Index](#DocIndex)
+[Back to the Index](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en)
 
 ***
 
