@@ -12,7 +12,6 @@ document are to be interpreted as described in *[*RFC
 ***
 
 <a name="DocIndex"><h3>Documentation Index</h3></a>
-<center>
 
 | ***Table of contents***				  |
 |-----------------------------------------|
@@ -26,8 +25,6 @@ document are to be interpreted as described in *[*RFC
 | [SDK Requirements](#SdkRequirements)    |
 | [SDK Installation](#SdkInstall)         |
 | [SDK Examples](#SdkExample)             |
-
-</center>
 
 ***
  
