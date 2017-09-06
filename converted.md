@@ -29,7 +29,7 @@ document are to be interpreted as described in *[*RFC
 | [SDK Installation](#SdkInstall)         | 12  |
 | [SDK Examples](#SdkExample)             | 13  |
 
-<span id="QuickStart" class="anchor"></span>Quick Start
+<a name="QuickStart"><h3>Quick Start</h3></a>
 
 In this quick start we provide you with some very basic information
 about how to access the API. More information and examples can be found
@@ -55,6 +55,8 @@ curl -u &lt;MY\_API\_KEY&gt;:
 
 **`Note`**`: To use JSONP, append to the endpoint
 "?callback=&lt;myCallbackName&gt;" without the quotation marks.`
+
+***
 
 <a name="ApiIntro"><h3>API Introduction</h3></a>
 
@@ -83,6 +85,8 @@ For comments and suggestions, visit
 [here](http://www.efrontlearning.net/contact).
 
 The Efront PRO team.
+
+***
 
 <a name="ApiRequirements"><h3>API Requirements</h3></a>
 
@@ -135,7 +139,6 @@ network/system administrator to do it for you.
 |                | GET        | /Plugin/:pluginName                 | Same as the above, but for the requested plugin.                                                                                                         |
 |                | POST       | /Plugin/:pluginName                 | Posts data to be used by the requested plugin.                                                                                                           |
 | **User**   | GET  | /Autologin/:loginName | Returns the auto-login URL for the requested user.                                                                                                                                                                                                                         |
-|------------|------|-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |            | GET  | /Logout/:loginName    | Logouts the requested user.                                                                                                                                                                                                                                                |
 |            | POST | /User                 | Creates a new user given some registration information. The information are defined as POST data fields. The required information to create successfully a user are the “login”, “name”, “surname”, “email” and “password”. In the future we plan to add some more fields. |
 |            | GET  | /Users                | Returns the entire user list.                                                                                                                                                                                                                                              |
@@ -146,8 +149,8 @@ network/system administrator to do it for you.
 |            | PUT  | /User/:Id/Deactivate  | Deactivates the specified user.                                                                                                                                                                                                                                            |
 | **System** | GET  | /System/Info          | Returns information about the system.                                                                                                                                                                                                                                      |
 
-***  
 ***
+
 <a name="ApiErrorHandling"><h3>API Error Handling</h3></a>
 
 The error state handling of the API is very easy. In each response a key
@@ -169,14 +172,11 @@ this [tool](#ApiLive).
 |------------------------|-------------------------------------------------------------------------------------------------------|
 | **503**                | -   Service unavailable. API status is disabled.                                                      |
 | **405**                | -   Unsupported HTTP method. Only GET, POST and PUT are currently supported.                          |
-| **404**                | -   The requested API call does not exist.                                                            
-                                                                                                                                 
-                          -   The requested entity (User, Course, etc) which is specified for example by an Id, does not exist.  |
+| **404**                | -   The requested API call does not exist. -   The requested entity (User, Course, etc) which is specified for example by an Id, does not exist.|
 | **401**                | -   Authentication required.                                                                          |
 | **400**                | -   General HTTP status code, if the action can’t be processed.                                       |
 
-*  
-*
+***
 
 <a name="ApiAuth"><h3>API Authentication</h3></a>
 
@@ -197,6 +197,8 @@ always generate a new one by clicking on the “**refresh**” icon.
 More information about how you MUST authenticate your requests (API
 calls) with your personal private key, you can read [here](#SdkInstall).
 
+***
+
 <a name="SdkIntro"><h3>API SDK Introduction</h3></a>
 
 With the eFront PRO SDK, you will be able to use its API easily and
@@ -205,10 +207,14 @@ efficiently without advanced programming knowledge.
 Programming Language: **PHP** | Version: **2.0.0** | API Support:
 **1.0**
 
+***
+
 <span id="SdkRequirements" class="anchor"></span>SDK Requirements
 
 If your system meets the eFront PRO's requirements, then it also meets
 the requirements of the SDK.
+
+***
 
 <a name="SdkInstall"><h3>SDK Installation</h3></a>
 
@@ -231,7 +237,7 @@ follow the below steps in order to work with the SDK:
 4.  Now paste the below code in the file you just create in order to
     start making calls:
 
-    **&lt;?php**
+    `<?php
 
     include ‘AutoLoader.php’;
 
@@ -249,7 +255,9 @@ follow the below steps in order to work with the SDK:
 
     $eFrontProSDK = **new** eFrontProSDK(**new** Api(new cUrl));
 
-    $eFrontProSDK-&gt;Config($apiVersion, $apiLocation, $apiKey);
+    $eFrontProSDK-&gt;Config($apiVersion, $apiLocation, $apiKey);`
+
+***
 
 <a name="SdkExample"><h3>SDK Examples</h3></a>
 
@@ -262,17 +270,17 @@ automatically authenticated and you won’t have to worry about URL
 construction for each unique call of the API. That’s the responsibility
 of the SDK.
 
-In the below use cases, ***each method of the GetAPI method*** returns a
+In the below use cases, __each method of the GetAPI method__ returns a
 string in JSON encoded format. You MUST decode it (json\_decode), in
 order to access the properties of the response. SDK doesn’t decode
 automatically these responses/strings, because sometimes it’s useful to
 store immediately this string into a database or create an array of
 multiple JSON encoded strings and do another work with it.
 
-Finally it’s *always RECOMMENDED* as a good practice, to use the SDK
+Finally it’s __always RECOMMENDED__ as a good practice, to use the SDK
 inside a try/catch block. For example:
 
-try {
+`try {
 
 // various SDK commands ..
 
@@ -281,122 +289,122 @@ try {
 echo ‘Oops! An error occurred. \[’, $e-&gt;getMessage(), ‘, ’,
 $e-&gt;getCode(), ‘\]’;
 
-}
+}`
 
 ***BASIC EXAMPLES***
 
 ***Check the status of an account.***
 
-$eFrontProSDK-&gt;GetAPI(‘Account’)-&gt;Exists($loginName, $password);
+`$eFrontProSDK-&gt;GetAPI(‘Account’)-&gt;Exists($loginName, $password);`
 
 ***Get all the branches*.**
 
-$eFrontProSDK-&gt;GetAPI(‘BranchList’)-&gt;GetAll();
+`$eFrontProSDK-&gt;GetAPI(‘BranchList’)-&gt;GetAll();`
 
 ***Get information about a branch*.** GetInfo method, accepts a positive
 integer as the branch Id.
 
-$eFrontProSDK-&gt;GetAPI(‘Branch’)-&gt;GetInfo($branchId);
+`$eFrontProSDK-&gt;GetAPI(‘Branch’)-&gt;GetInfo($branchId);`
 
 ***Create a branch*.** Create method, accepts an associative array as
 the branch information to be created. The required information consisted
 of the "name" and "url"; "parent\_ID" and "public\_ID" are optional.
 
-$eFrontProSDK-&gt;GetAPI(‘Branch’)-&gt;Create(\[
+`$eFrontProSDK-&gt;GetAPI(‘Branch’)-&gt;Create(\[
 
 'name' =&gt; 'foo', 'url' =&gt; 'foo', 'parent\_ID' =&gt; 10,
 'public\_ID' =&gt; 'abc123'
 
-\]);
+\]);`
 
 ***Add a user in a branch*.** AddRelation method, accepts 2 parameters
 which both are positive integers. The 1<sup>st</sup> one refers to the
 user’s Id and the 2<sup>nd</sup> to the branch’s Id.
 
-$eFrontProSDK-&gt;GetAPI(‘BranchUser’)-&gt;AddRelation($userId,
-$branchId);
+`$eFrontProSDK-&gt;GetAPI(‘BranchUser’)-&gt;AddRelation($userId,
+$branchId);`
 
 ***Get all the categories (tree structured)*.**
 
-$eFrontProSDK-&gt;GetAPI(‘CategoryList’)-&gt;GetAll();
+`$eFrontProSDK-&gt;GetAPI(‘CategoryList’)-&gt;GetAll();`
 
 ***Get information about a category*.** GetInfo method, accepts a
 positive integer as the category Id.
 
-$eFrontProSDK-&gt;GetAPI(‘Category’)-&gt;GetInfo($categoryId);
+`$eFrontProSDK-&gt;GetAPI(‘Category’)-&gt;GetInfo($categoryId);`
 
 ***Get all courses*.**
 
-$eFrontProSDK-&gt;GetAPI(‘CourseList’)-&gt;GetAll();
+`$eFrontProSDK-&gt;GetAPI(‘CourseList’)-&gt;GetAll();`
 
 ***Get information about a course*.** GetInfo method, accepts a positive
 integer as the course Id.
 
-$eFrontProSDK-&gt;GetAPI(‘Course’)-&gt;GetInfo($courseId);
+`$eFrontProSDK-&gt;GetAPI(‘Course’)-&gt;GetInfo($courseId);`
 
 ***Get all courses*.**
 
-$eFrontProSDK-&gt;GetAPI(‘CurriculumList’)-&gt;GetAll();
+`$eFrontProSDK-&gt;GetAPI(‘CurriculumList’)-&gt;GetAll();`
 
 ***Get all the groups*.**
 
-$eFrontProSDK-&gt;GetAPI(‘GroupList’)-&gt;GetAll();
+`$eFrontProSDK-&gt;GetAPI(‘GroupList’)-&gt;GetAll();`
 
 ***Get information about a group*.** GetInfo method, accepts a positive
 integer as the group Id.
 
-$eFrontProSDK-&gt;GetAPI(‘Group’)-&gt;GetInfo($groupId);
+`$eFrontProSDK-&gt;GetAPI(‘Group’)-&gt;GetInfo($groupId);`
 
 ***Get all the plugins*.**
 
-$eFrontProSDK-&gt;GetAPI(‘Plugin’)-&gt;GetAll();
+`$eFrontProSDK-&gt;GetAPI(‘Plugin’)-&gt;GetAll();`
 
 ***Get information about a plugin*.** GetInfo method, accepts a string
 as the plugin name.
 
-$eFrontProSDK-&gt;GetAPI(‘Plugin’)-&gt;GetInfo($pluginName);
+`$eFrontProSDK-&gt;GetAPI(‘Plugin’)-&gt;GetInfo($pluginName);`
 
 ***Notify the specified plugin by sending some data*.** Notify method,
 accepts a string as the plugin name (1<sup>st</sup> parameter) and an
 array (2<sup>nd</sup> parameter) with the custom notification data.
 
-$eFrontProSDK-&gt;GetAPI(‘Plugin’)-&gt;Notify($pluginName, $data);
+`$eFrontProSDK-&gt;GetAPI(‘Plugin’)-&gt;Notify($pluginName, $data);`
 
 ***Get all the users*.**
 
-$eFrontProSDK-&gt;GetAPI(‘UserList’)-&gt;GetAll();
+`$eFrontProSDK-&gt;GetAPI(‘UserList’)-&gt;GetAll();`
 
 ***Get all the users by their e-mail address*.** GetAllByMail method,
 accepts a string as the e-mail address of a user.
 
-$eFrontProSDK-&gt;GetAPI(‘UserList’)-&gt;GetAllByMail($mailAddress);
+`$eFrontProSDK-&gt;GetAPI(‘UserList’)-&gt;GetAllByMail($mailAddress);`
 
 ***Get information about a user*.** GetInfo method, accepts a positive
 integer as the user Id.
 
-$eFrontProSDK-&gt;GetAPI(‘User’)-&gt;GetInfo($userId);
+`$eFrontProSDK-&gt;GetAPI(‘User’)-&gt;GetInfo($userId);`
 
 ***Activate a user*.** Activate method, accepts a positive integer as
 the user Id.
 
-$eFrontProSDK-&gt;GetAPI(‘User’)-&gt;Activate($userId);
+`$eFrontProSDK-&gt;GetAPI(‘User’)-&gt;Activate($userId);`
 
 ***Deactivate a user*.** Deactivate method, accepts a positive integer
 as the user Id.
 
-$eFrontProSDK-&gt;GetAPI(‘User’)-&gt;Deactivate($userId);
+`$eFrontProSDK-&gt;GetAPI(‘User’)-&gt;Deactivate($userId);`
 
 ***Create a user*.** Create method, accepts an associative array as the
 user’s information to be created. The required information consisted of
 the login, name, surname, email and password fields.
 
-$eFrontProSDK-&gt;GetAPI(‘User’)-&gt;Create (\[
+`$eFrontProSDK-&gt;GetAPI(‘User’)-&gt;Create (\[
 
 'login' =&gt; 'foo', 'name' =&gt; 'bar', 'surname' =&gt; 'baz',
 
 'email' =&gt; 'foo@bar.buz', 'password' =&gt; 'blackWhale'
 
-\]);
+\]);`
 
 ***Edit a user*.** Edit method, accepts 2 parameters. The 1<sup>st</sup>
 parameter is a positive integer as the user Id and the 2<sup>nd</sup> an
@@ -404,25 +412,25 @@ associative array as the user’s information to be edited. The keys of
 the array are the same as the above method (Create) but aren’t required
 all of them, so you can edit only the information which you want.
 
-$eFrontProSDK-&gt;GetAPI(‘User’)-&gt;Edit (
+`$eFrontProSDK-&gt;GetAPI(‘User’)-&gt;Edit (
 
 $userId, \['login' =&gt; 'foo1', 'password' =&gt; 'blackWhale123'\]
 
-);
+);`
 
 ***Add a user in a group*.** AddRelation method, accepts 2 parameters
 which both are positive integers. The 1<sup>st</sup> one refers to the
 user’s Id and the 2<sup>nd</sup> to the group’s Id.
 
-$eFrontProSDK-&gt;GetAPI(‘UserGroup’)-&gt;AddRelation($userId,
-$groupId);
+`$eFrontProSDK-&gt;GetAPI(‘UserGroup’)-&gt;AddRelation($userId,
+$groupId);`
 
 ***Remove a user from a group*.** RemoveRelation method, accepts 2
 parameters which both are positive integers. The 1<sup>st</sup> one
 refers to the user’s Id and the 2<sup>nd</sup> to the group’s Id.
 
-$eFrontProSDK-&gt;GetAPI(‘UserGroup’)-&gt;RemoveRelation($userId,
-$groupId);
+`$eFrontProSDK-&gt;GetAPI(‘UserGroup’)-&gt;RemoveRelation($userId,
+$groupId);`
 
 ***Add a user in a course*.** AddRelation method, accepts 3 parameters
 which. The 1<sup>st</sup> one refers to the user’s Id (positive
@@ -431,8 +439,8 @@ integer), the 2<sup>nd</sup> to the course’s Id (positive integer) and
 course belongs to a curriculum. The last parameter is set to false by
 default.
 
-$eFrontProSDK-&gt;GetAPI(‘CourseUser’)-&gt;AddRelation($userId,
-$courseId, $force);
+`$eFrontProSDK-&gt;GetAPI(‘CourseUser’)-&gt;AddRelation($userId,
+$courseId, $force);`
 
 ***Add a user in a curriculum*.** AddRelation method, accepts 3
 parameters which. The 1<sup>st</sup> one refers to the user’s Id
@@ -440,64 +448,64 @@ parameters which. The 1<sup>st</sup> one refers to the user’s Id
 integer) and 3rd to whether you want to force the operation or not. The
 last parameter is set to false by default.
 
-$eFrontProSDK-&gt;GetAPI(‘CurriculumUser’)-&gt;AddRelation($userId,
-$curriculumId, $force);
+`$eFrontProSDK-&gt;GetAPI(‘CurriculumUser’)-&gt;AddRelation($userId,
+$curriculumId, $force);`
 
 ***Check the status of a user in a course*.** CheckStatus method,
 accepts 2 parameters which both are positive integers. The
 1<sup>st</sup> one refers to the user’s Id and the 2<sup>nd</sup> to the
 course’s Id.
 
-$eFrontProSDK-&gt;GetAPI(‘CourseUser’)-&gt;CheckStatus($userId,
-$courseId);
+`$eFrontProSDK-&gt;GetAPI(‘CourseUser’)-&gt;CheckStatus($userId,
+$courseId);`
 
 ***Update the status of a user in a course*.** UpdateStatus method,
 accepts 3 parameters. The first 2 are positive integers. The
 1<sup>st</sup> one refers to the user’s Id and the 2<sup>nd</sup> to the
 course’s Id. The last is an array which contains the update info.
 
-$eFrontProSDK-&gt;GetAPI(‘CourseUser’)-&gt;UpdateStatus (
+`$eFrontProSDK-&gt;GetAPI(‘CourseUser’)-&gt;UpdateStatus (
 
 $userId, $courseId,
 
 \[‘score’ =&gt; 100, ‘to\_timestamp’ =&gt; 1418893082, ‘status’ =&gt;
 ‘completed’\]
 
-);
+);`
 
 ***Remove a user from a course***. RemoveRelation method, accepts 2
 parameters which both are positive integers. The 1<sup>st</sup> one
 refers to the user’s Id and the 2<sup>nd</sup> to the course’s Id.
 
-$eFrontProSDK-&gt;GetAPI(‘CourseUser’)-&gt;RemoveRelation($userId,
-$courseId);
+`$eFrontProSDK-&gt;GetAPI(‘CourseUser’)-&gt;RemoveRelation($userId,
+$courseId);`
 
 ***Remove a user from a curriculum***. RemoveRelation method, accepts 2
 parameters which both are positive integers. The 1<sup>st</sup> one
 refers to the user’s Id and the 2<sup>nd</sup> to the curriculum’s Id.
 
-$eFrontProSDK-&gt;GetAPI(‘CurriculumUser’)-&gt;RemoveRelation($userId,
-$curriculumId);
+`$eFrontProSDK-&gt;GetAPI(‘CurriculumUser’)-&gt;RemoveRelation($userId,
+$curriculumId);`
 
 ***Get information about the system***.
 
-$eFrontProSDK-&gt;GetAPI(‘System’)-&gt;GetInfo();
+`$eFrontProSDK-&gt;GetAPI(‘System’)-&gt;GetInfo();`
 
 ***Autologin a user*.** Autologin method, accepts a string as the user’s
 login name.
 
-$eFrontProSDK-&gt;GetAPI(‘User’)-&gt;AutoLogin($loginName);
+`$eFrontProSDK-&gt;GetAPI(‘User’)-&gt;AutoLogin($loginName);`
 
 ***Logout a user*.** Logout method, accepts a string as the user’s login
 name.
 
-$eFrontProSDK-&gt;GetAPI(‘User’)-&gt;Logout($loginName);
+`$eFrontProSDK-&gt;GetAPI(‘User’)-&gt;Logout($loginName);`
 
 ***ADVANCED EXAMPLES***
 
 **Logout all the users:**
 
-**try** {
+`try{
 
 *// See page 12 ..*
 
@@ -540,12 +548,11 @@ $eFrontProSDK-&gt;GetAPI(**'User'**)-&gt;Logout($user\[**'login'**\]),
 }  
 } **catch** (\\Exception $e) {  
 **echo** $e-&gt;getMessage();  
-}
+}`
 
-**Activate all the users with odd Id and deactivate these with even
-Id:**
+**Activate all the users with odd Id and deactivate these with even Id:**
 
-**try** {
+`try{
 
 *// See page 12 ..*
 
@@ -601,12 +608,11 @@ success.&lt;br&gt;'**;
 }  
 } **catch** (\\Exception $e) {  
 **echo** $e-&gt;getMessage();  
-}
+}`
 
-**Create a user (assuming a male), assign him to a course and get the
-login URL by auto login him:**
+**Create a user (assuming a male), assign him to a course and get the login URL by auto login him:**
 
-**try** {
+try` {
 
 *// See page 12 ..*
 
@@ -772,4 +778,5 @@ $avgScore = *round*($avgScore, 2);
 **echo '&lt;/tbody&gt;&lt;/table&gt;'**;  
 } **catch** (\\Exception $e) {  
 **echo** $e-&gt;getMessage();  
-}<span id="ApiLive" class="anchor"></span>
+}`
+<a name="ApiLive"></a>
