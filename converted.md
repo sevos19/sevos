@@ -26,7 +26,7 @@ document are to be interpreted as described in *[*RFC
 | [SDK Examples](#SdkExample)             | 13  |
 
 ***
-
+ 
 <a name="QuickStart"><h3>Quick Start</h3></a>
 
 In this quick start we provide you with some very basic information
@@ -813,3 +813,4 @@ $avgScore = *round*($avgScore, 2);
 }
 ```
 <a name="ApiLive"></a>
+[Back to Quick Start](#DocIndex)
