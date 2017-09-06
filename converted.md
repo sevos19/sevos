@@ -49,7 +49,7 @@ curl -u &lt;MY\_API\_KEY&gt;:
 
 -   See more on how to initialize $eFrontProSDK, [here](#SdkInstall).
 
-`**Note**: To use JSONP, append to the endpoint
+`<h3>Note</h3>: To use JSONP, append to the endpoint
 "?callback=&lt;myCallbackName&gt;" without the quotation marks.`
 
 <a name="ApiIntro"><h3>API Introduction</h3></a>
