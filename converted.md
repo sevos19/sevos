@@ -114,8 +114,7 @@ network/system administrator to do it for you.
 | **Account**    | POST       | /Account/Status                     | Checks whether a user exists or not by providing the login name and the password.                                                                        |
 | **Branch**     | GET        | /Branches                           | Returns the branch list.                                                                                                                                 |
 |                | GET        | /Branch/:Id                         | Returns information about the branch with the associated Id.                                                                                             |
-|                | POST       | /Branch                             | Creates a branch with the requested attributes.                                                                                                          |
-| **Branch**     
+|                | POST       | /Branch                             | Creates a branch with the requested attributes.                                                                                                          |  
                  
  **+**           
                  
