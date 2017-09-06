@@ -11,18 +11,18 @@ document are to be interpreted as described in *[*RFC
 
 ***
 
-<a name="DocIndex"><h3>Documentation Index</h3></a>
-
-| [Quick Start](#QuickStart)              | 4   |
-| [API Introduction](#ApiIntro)           | 5   |
-| [API Requirements](#ApiRequirements)    | 6   |
-| [API Call Reference](#ApiCallRef)       | 7   |
-| [API Error Handling](#ApiErrorHandling) | 10  |
-| [API Authentication](#ApiAuth)          | 11  |
-| [SDK Introduction](#SdkIntro)           | 11  |
-| [SDK Requirements](#SdkRequirements)    | 11  |
-| [SDK Installation](#SdkInstall)         | 12  |
-| [SDK Examples](#SdkExample)             | 13  |
+|<a name="DocIndex"><h3>Documentation Index</h3></a>|
+|-----------------------------------------|
+| [Quick Start](#QuickStart)              |
+| [API Introduction](#ApiIntro)           |
+| [API Requirements](#ApiRequirements)    |
+| [API Call Reference](#ApiCallRef)       |
+| [API Error Handling](#ApiErrorHandling) |
+| [API Authentication](#ApiAuth)          |
+| [SDK Introduction](#SdkIntro)           |
+| [SDK Requirements](#SdkRequirements)    |
+| [SDK Installation](#SdkInstall)         |
+| [SDK Examples](#SdkExample)             |
 
 ***
  
