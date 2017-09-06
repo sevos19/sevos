@@ -104,7 +104,7 @@ network/system administrator to do it for you.
     authorization headers, so you have to pass the HTTP authorization
     headers to an environment variable.
 
-<span id="ApiCallRef" class="anchor"></span>API Calls Reference
+<a name="ApiCallRef"><h3>API Calls Reference</h3></a>
 
 | ***Entity***   | ***HTTP*** | ***Call***                          | ***Purpose***                                                                                                                                            |
 |----------------|------------|-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -162,8 +162,7 @@ network/system administrator to do it for you.
 
 ***  
 ***
-
-<span id="ApiErrorHandling" class="anchor"></span>API Error Handling
+<a name="ApiErrorHandling"><h3>API Error Handling</h3></a>
 
 The error state handling of the API is very easy. In each response a key
 “**success**” is always included. This key contains the value “**true**”
@@ -193,7 +192,7 @@ this [tool](#ApiLive).
 *  
 *
 
-<span id="ApiAuth" class="anchor"></span>API Authentication
+<a name="ApiAuth"><h3>API Authentication</h3></a>
 
 eFront PRO API doesn’t offer any call that it’s public, in other words
 that it isn’t require authentication. So you MUST authenticate your
@@ -212,8 +211,7 @@ always generate a new one by clicking on the “**refresh**” icon.
 More information about how you MUST authenticate your requests (API
 calls) with your personal private key, you can read [here](#SdkInstall).
 
-<span id="ApiCallDepth" class="anchor"><span id="SdkIntro"
-class="anchor"></span></span>SDK Introduction
+<a name="SdkIntro"><h3>API SDK Introduction</h3></a>
 
 With the eFront PRO SDK, you will be able to use its API easily and
 efficiently without advanced programming knowledge.
@@ -226,7 +224,7 @@ Programming Language: **PHP** | Version: **2.0.0** | API Support:
 If your system meets the eFront PRO's requirements, then it also meets
 the requirements of the SDK.
 
-<span id="SdkInstall" class="anchor"></span>SDK Installation
+<a name="SdkInstall"><h3>SDK Installation</h3></a>
 
 In this chapter, we will analyze how to install your SDK. You MUST
 follow the below steps in order to work with the SDK:
@@ -267,7 +265,7 @@ follow the below steps in order to work with the SDK:
 
     $eFrontProSDK-&gt;Config($apiVersion, $apiLocation, $apiKey);
 
-<span id="SdkExample" class="anchor"></span>SDK Examples
+<a name="SdkExample"><h3>SDK Examples</h3></a>
 
 In the [previous chapter](#SdkInstall) you learn how you can install the
 SDK. Moreover on step 4, you initialize the SDK with its dependencies,
