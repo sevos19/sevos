@@ -1,8 +1,9 @@
-<p align="center">
+<p>
 <h1> EFRONT PRO 4 </h1>
 
 <h2> REST JSON API DOCUMENTATION </h2>
 </p>
+
 (Version 1.0)
 
 *The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
