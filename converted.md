@@ -1,8 +1,8 @@
-<p style="text-align: center;">
-**EFRONT PRO 4**
 
-REST JSON API DOCUMENTATION
-</p>
+#EFRONT PRO 4 <h1>
+
+##REST JSON API DOCUMENTATION <h2>
+
 (Version 1.0)
 
 *The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
@@ -10,7 +10,7 @@ REST JSON API DOCUMENTATION
 document are to be interpreted as described in *[*RFC
 2119*](http://www.ietf.org/rfc/rfc2119.txt)*.*
 
-<p style="text-align: center;">
+
 <span id="DocIndex" class="anchor"></span>Documentation Index
 
 | [Quick Start](#QuickStart)              | 4   |
@@ -26,7 +26,7 @@ document are to be interpreted as described in *[*RFC
 | [SDK Examples](#SdkExample)             | 13  |
 
 <span id="QuickStart" class="anchor"></span>Quick Start
-</p>
+
 In this quick start we provide you with some very basic information
 about how to access the API. More information and examples can be found
 in the following chapters.
