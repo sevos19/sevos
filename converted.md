@@ -280,7 +280,8 @@ multiple JSON encoded strings and do another work with it.
 Finally it’s __always RECOMMENDED__ as a good practice, to use the SDK
 inside a try/catch block. For example:
 
-`try {
+```
+try {
 
 // various SDK commands ..
 
@@ -289,7 +290,8 @@ inside a try/catch block. For example:
 echo ‘Oops! An error occurred. \[’, $e-&gt;getMessage(), ‘, ’,
 $e-&gt;getCode(), ‘\]’;
 
-}`
+}
+```
 
 ***BASIC EXAMPLES***
 
