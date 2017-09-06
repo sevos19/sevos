@@ -310,19 +310,23 @@ integer as the branch Id.
 the branch information to be created. The required information consisted
 of the "name" and "url"; "parent\_ID" and "public\_ID" are optional.
 
-`$eFrontProSDK-&gt;GetAPI(‘Branch’)-&gt;Create(\[
+```
+$eFrontProSDK-&gt;GetAPI(‘Branch’)-&gt;Create(\[
 
 'name' =&gt; 'foo', 'url' =&gt; 'foo', 'parent\_ID' =&gt; 10,
 'public\_ID' =&gt; 'abc123'
 
-\]);`
+\]);
+```
 
 ***Add a user in a branch*.** AddRelation method, accepts 2 parameters
 which both are positive integers. The 1<sup>st</sup> one refers to the
 user’s Id and the 2<sup>nd</sup> to the branch’s Id.
 
-`$eFrontProSDK-&gt;GetAPI(‘BranchUser’)-&gt;AddRelation($userId,
-$branchId);`
+```
+$eFrontProSDK-&gt;GetAPI(‘BranchUser’)-&gt;AddRelation($userId,
+$branchId);
+```
 
 ***Get all the categories (tree structured)*.**
 
@@ -398,13 +402,15 @@ as the user Id.
 user’s information to be created. The required information consisted of
 the login, name, surname, email and password fields.
 
-`$eFrontProSDK-&gt;GetAPI(‘User’)-&gt;Create (\[
+```
+$eFrontProSDK-&gt;GetAPI(‘User’)-&gt;Create (\[
 
 'login' =&gt; 'foo', 'name' =&gt; 'bar', 'surname' =&gt; 'baz',
 
 'email' =&gt; 'foo@bar.buz', 'password' =&gt; 'blackWhale'
 
-\]);`
+\]);
+```
 
 ***Edit a user*.** Edit method, accepts 2 parameters. The 1<sup>st</sup>
 parameter is a positive integer as the user Id and the 2<sup>nd</sup> an
@@ -412,25 +418,31 @@ associative array as the user’s information to be edited. The keys of
 the array are the same as the above method (Create) but aren’t required
 all of them, so you can edit only the information which you want.
 
-`$eFrontProSDK-&gt;GetAPI(‘User’)-&gt;Edit (
+```
+$eFrontProSDK-&gt;GetAPI(‘User’)-&gt;Edit (
 
 $userId, \['login' =&gt; 'foo1', 'password' =&gt; 'blackWhale123'\]
 
-);`
+);
+```
 
 ***Add a user in a group*.** AddRelation method, accepts 2 parameters
 which both are positive integers. The 1<sup>st</sup> one refers to the
 user’s Id and the 2<sup>nd</sup> to the group’s Id.
 
-`$eFrontProSDK-&gt;GetAPI(‘UserGroup’)-&gt;AddRelation($userId,
-$groupId);`
+```
+$eFrontProSDK-&gt;GetAPI(‘UserGroup’)-&gt;AddRelation($userId,
+$groupId);
+```
 
 ***Remove a user from a group*.** RemoveRelation method, accepts 2
 parameters which both are positive integers. The 1<sup>st</sup> one
 refers to the user’s Id and the 2<sup>nd</sup> to the group’s Id.
 
-`$eFrontProSDK-&gt;GetAPI(‘UserGroup’)-&gt;RemoveRelation($userId,
-$groupId);`
+```
+$eFrontProSDK-&gt;GetAPI(‘UserGroup’)-&gt;RemoveRelation($userId,
+$groupId);
+```
 
 ***Add a user in a course*.** AddRelation method, accepts 3 parameters
 which. The 1<sup>st</sup> one refers to the user’s Id (positive
@@ -439,8 +451,10 @@ integer), the 2<sup>nd</sup> to the course’s Id (positive integer) and
 course belongs to a curriculum. The last parameter is set to false by
 default.
 
-`$eFrontProSDK-&gt;GetAPI(‘CourseUser’)-&gt;AddRelation($userId,
-$courseId, $force);`
+```
+$eFrontProSDK-&gt;GetAPI(‘CourseUser’)-&gt;AddRelation($userId,
+$courseId, $force);
+```
 
 ***Add a user in a curriculum*.** AddRelation method, accepts 3
 parameters which. The 1<sup>st</sup> one refers to the user’s Id
@@ -448,44 +462,54 @@ parameters which. The 1<sup>st</sup> one refers to the user’s Id
 integer) and 3rd to whether you want to force the operation or not. The
 last parameter is set to false by default.
 
-`$eFrontProSDK-&gt;GetAPI(‘CurriculumUser’)-&gt;AddRelation($userId,
-$curriculumId, $force);`
+```
+$eFrontProSDK-&gt;GetAPI(‘CurriculumUser’)-&gt;AddRelation($userId,
+$curriculumId, $force);
+```
 
 ***Check the status of a user in a course*.** CheckStatus method,
 accepts 2 parameters which both are positive integers. The
 1<sup>st</sup> one refers to the user’s Id and the 2<sup>nd</sup> to the
 course’s Id.
 
-`$eFrontProSDK-&gt;GetAPI(‘CourseUser’)-&gt;CheckStatus($userId,
-$courseId);`
+```
+$eFrontProSDK-&gt;GetAPI(‘CourseUser’)-&gt;CheckStatus($userId,
+$courseId);
+```
 
 ***Update the status of a user in a course*.** UpdateStatus method,
 accepts 3 parameters. The first 2 are positive integers. The
 1<sup>st</sup> one refers to the user’s Id and the 2<sup>nd</sup> to the
 course’s Id. The last is an array which contains the update info.
 
-`$eFrontProSDK-&gt;GetAPI(‘CourseUser’)-&gt;UpdateStatus (
+```
+$eFrontProSDK-&gt;GetAPI(‘CourseUser’)-&gt;UpdateStatus (
 
 $userId, $courseId,
 
 \[‘score’ =&gt; 100, ‘to\_timestamp’ =&gt; 1418893082, ‘status’ =&gt;
 ‘completed’\]
 
-);`
+);
+```
 
 ***Remove a user from a course***. RemoveRelation method, accepts 2
 parameters which both are positive integers. The 1<sup>st</sup> one
 refers to the user’s Id and the 2<sup>nd</sup> to the course’s Id.
 
-`$eFrontProSDK-&gt;GetAPI(‘CourseUser’)-&gt;RemoveRelation($userId,
-$courseId);`
+```
+$eFrontProSDK-&gt;GetAPI(‘CourseUser’)-&gt;RemoveRelation($userId,
+$courseId);
+```
 
 ***Remove a user from a curriculum***. RemoveRelation method, accepts 2
 parameters which both are positive integers. The 1<sup>st</sup> one
 refers to the user’s Id and the 2<sup>nd</sup> to the curriculum’s Id.
 
-`$eFrontProSDK-&gt;GetAPI(‘CurriculumUser’)-&gt;RemoveRelation($userId,
-$curriculumId);`
+```
+$eFrontProSDK-&gt;GetAPI(‘CurriculumUser’)-&gt;RemoveRelation($userId,
+$curriculumId);
+```
 
 ***Get information about the system***.
 
@@ -505,7 +529,8 @@ name.
 
 **Logout all the users:**
 
-`try{
+```
+try{
 
 *// See page 12 ..*
 
@@ -548,11 +573,13 @@ $eFrontProSDK-&gt;GetAPI(**'User'**)-&gt;Logout($user\[**'login'**\]),
 }  
 } **catch** (\\Exception $e) {  
 **echo** $e-&gt;getMessage();  
-}`
+}
+```
 
 **Activate all the users with odd Id and deactivate these with even Id:**
 
-`try{
+```
+try{
 
 *// See page 12 ..*
 
@@ -608,11 +635,13 @@ success.&lt;br&gt;'**;
 }  
 } **catch** (\\Exception $e) {  
 **echo** $e-&gt;getMessage();  
-}`
+}
+```
 
 **Create a user (assuming a male), assign him to a course and get the login URL by auto login him:**
 
-try` {
+```
+try {
 
 *// See page 12 ..*
 
@@ -778,5 +807,6 @@ $avgScore = *round*($avgScore, 2);
 **echo '&lt;/tbody&gt;&lt;/table&gt;'**;  
 } **catch** (\\Exception $e) {  
 **echo** $e-&gt;getMessage();  
-}`
+}
+```
 <a name="ApiLive"></a>
