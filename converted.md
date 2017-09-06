@@ -52,7 +52,7 @@ in the following chapters.
 
 **`Note`**`: To use JSONP, append to the endpoint
 "?callback=&lt;myCallbackName&gt;" without the quotation marks.`
-
+[Back to the Index](#DocIndex)
 ***
 
 <a name="ApiIntro"><h3>API Introduction</h3></a>
@@ -82,7 +82,7 @@ For comments and suggestions, visit
 [here](http://www.efrontlearning.net/contact).
 
 The Efront PRO team.
-
+[Back to the Index](#DocIndex)
 ***
 
 <a name="ApiRequirements"><h3>API Requirements</h3></a>
@@ -107,7 +107,7 @@ network/system administrator to do it for you.
     Fast-CGI protocol, usually there exists a problem with the HTTP
     authorization headers, so you have to pass the HTTP authorization
     headers to an environment variable.
-
+[Back to the Index](#DocIndex)
 ***
 	
 <a name="ApiCallRef"><h3>API Calls Reference</h3></a>
@@ -147,7 +147,7 @@ network/system administrator to do it for you.
 |            | PUT  | /User/:Id/Activate    | Activates the specified user.                                                                                                                                                                                                                                              |
 |            | PUT  | /User/:Id/Deactivate  | Deactivates the specified user.                                                                                                                                                                                                                                            |
 | **System** | GET  | /System/Info          | Returns information about the system.                                                                                                                                                                                                                                      |
-
+[Back to the Index](#DocIndex)
 ***
 
 <a name="ApiErrorHandling"><h3>API Error Handling</h3></a>
@@ -174,7 +174,7 @@ this [tool](#ApiLive).
 | **404**                | -   The requested API call does not exist. -   The requested entity (User, Course, etc) which is specified for example by an Id, does not exist.|
 | **401**                | -   Authentication required.                                                                          |
 | **400**                | -   General HTTP status code, if the action can’t be processed.                                       |
-
+[Back to the Index](#DocIndex)
 ***
 
 <a name="ApiAuth"><h3>API Authentication</h3></a>
@@ -195,7 +195,7 @@ always generate a new one by clicking on the “**refresh**” icon.
 
 More information about how you MUST authenticate your requests (API
 calls) with your personal private key, you can read [here](#SdkInstall).
-
+[Back to the Index](#DocIndex)
 ***
 
 <a name="SdkIntro"><h3>API SDK Introduction</h3></a>
@@ -205,14 +205,14 @@ efficiently without advanced programming knowledge.
 
 Programming Language: **PHP** | Version: **2.0.0** | API Support:
 **1.0**
-
+[Back to the Index](#DocIndex)
 ***
 
 <a name="SdkRequirements"><h3>SDK Requirements</h3></a>
 
 If your system meets the eFront PRO's requirements, then it also meets
 the requirements of the SDK.
-
+[Back to the Index](#DocIndex)
 ***
 
 <a name="SdkInstall"><h3>SDK Installation</h3></a>
@@ -257,7 +257,7 @@ follow the below steps in order to work with the SDK:
 
     $eFrontProSDK-&gt;Config($apiVersion, $apiLocation, $apiKey);
 	```
-
+[Back to the Index](#DocIndex)
 ***
 
 <a name="SdkExample"><h3>SDK Examples</h3></a>
@@ -813,4 +813,4 @@ $avgScore = *round*($avgScore, 2);
 }
 ```
 <a name="ApiLive"></a>
-[Back to Quick Start](#DocIndex)
+[Back to the Index](#DocIndex)
