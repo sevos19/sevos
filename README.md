@@ -165,7 +165,7 @@ network/system administrator to do it for you.
 The error state handling of the API is very easy. In each response a key
 “**success**” is always included. This key contains the value “**true**”
 in case of success or “**false**” when something has gone wrong. That
-way you can easily check if the call to the API was succe</</d or failed.
+way you can easily check if the call to the API was succeed or failed.
 
 Except that, we offer an additional methodology to be informed about the
 error states, and this is by the HTTP response status codes. Anything
