@@ -36,7 +36,7 @@ in the following chapters.
 
 1.  Access through the command line (cURL):
 
-	curl -u &lt;MY\_API\_KEY&gt;:<http://my-efront-pro.com/API/v1.0/System/Info>
+	`curl -u &lt;MY\_API\_KEY&gt;:<http://my-efront-pro.com/API/v1.0/System/Info>`
 
 	-   Replace &lt;MY\_API\_KEY&gt; with your API key.
 
