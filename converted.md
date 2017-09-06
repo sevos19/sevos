@@ -52,8 +52,8 @@ curl -u &lt;MY\_API\_KEY&gt;:
 
 **Note**: To use JSONP, append to the endpoint
 "?callback=&lt;myCallbackName&gt;" without the quotation marks.
-<a name="ApiIntro">
-<span id="ApiIntro" class="anchor"></span>API Introduction
+
+<a name="ApiIntro"><h3>API Introduction</h3></a>
 
 eFront PRO provides a comprehensive REST JSON API that allows
 interaction with remote services. Authentication is based on an API key
@@ -81,7 +81,7 @@ For comments and suggestions, visit
 
 The Efront PRO team.
 
-<span id="ApiRequirements" class="anchor"></span>API Requirements
+<a name="ApiRequirements"><h3>API Requirements</h3></a>
 
 API doesn’t have or require different technical requirements than eFront
 PRO. If your system meets the eFront PRO's requirements, then it also
