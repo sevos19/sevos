@@ -12,49 +12,18 @@ document are to be interpreted as described in *[*RFC
 ***
 
 <a name="DocIndex"><h3>Documentation Index</h3></a>
-<table>
-		<tr>
-			<td>
-				[Quick Start](#QuickStart)                 
-			</td>
-			</tr><tr>
-			<td>
-				[API Introduction](#ApiIntro)              
-			</td>
-			</tr><tr>
-			<td>
-				[API Requirements](#ApiRequirements)
-			</td>
-			</tr><tr>
-			<td>
-				[API Call Reference](#ApiCallRef)
-			</td>
-			</tr><tr>
-			<td>
-				[API Error Handling](#ApiErrorHandling)
-			</td>
-			</tr><tr>
-			<td>
-				[API Authentication](#ApiAuth)
-			</td>
-			</tr><tr>
-			<td>
-				[SDK Introduction](#SdkIntro)
-			</td>
-			</tr><tr>
-			<td>
-				[SDK Requirements](#SdkRequirements)
-			</td>
-			</tr><tr>
-			<td>
-				[SDK Installation](#SdkInstall)
-			</td>
-			</tr><tr>
-			<td>
-				[SDK Examples](#SdkExample)
-			</td>
-			</tr>			
-</table>
+
+| [Quick Start](#QuickStart)              | 4   |
+| [API Introduction](#ApiIntro)           | 5   |
+| [API Requirements](#ApiRequirements)    | 6   |
+| [API Call Reference](#ApiCallRef)       | 7   |
+| [API Error Handling](#ApiErrorHandling) | 10  |
+| [API Authentication](#ApiAuth)          | 11  |
+| [SDK Introduction](#SdkIntro)           | 11  |
+| [SDK Requirements](#SdkRequirements)    | 11  |
+| [SDK Installation](#SdkInstall)         | 12  |
+| [SDK Examples](#SdkExample)             | 13  |
+
 ***
  
 <a name="QuickStart"><h3>Quick Start</h3></a>
