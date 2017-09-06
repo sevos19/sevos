@@ -114,36 +114,24 @@ network/system administrator to do it for you.
 | **Account**    | POST       | /Account/Status                     | Checks whether a user exists or not by providing the login name and the password.                                                                        |
 | **Branch**     | GET        | /Branches                           | Returns the branch list.                                                                                                                                 |
 |                | GET        | /Branch/:Id                         | Returns information about the branch with the associated Id.                                                                                             |
-|                | POST       | /Branch                             | Creates a branch with the requested attributes.                                                                                                          |  
-                 
- **+**           
-                 
+|                | POST       | /Branch                             | Creates a branch with the requested attributes.                                                                                                          |                                    
  **User**        | PUT        | /Branch/:Id/AddUser                 | Adds a user to the specified branch. The Id in the URL, refers to the branch. The Id of the user is defined as a PUT field, in the request.              |
 | **Category**   | GET        | /Categories                         | Returns the category list (tree structured).                                                                                                             |
 |                | GET        | /Category/:Id                       | Returns information about the category with the associated Id.                                                                                           |
 | **Course**     | GET        | /Courses                            | Returns the complete list of courses.                                                                                                                    |
 |                | GET        | /Course/:Id                         | Returns information about the course with the associated Id.                                                                                             |
 | **Curriculum** | GET        | /curriculums                        | Returns the complete list of curriculums.                                                                                                                |
-| **Course**     
-                 
- **+**           
-                 
+| **Course**                     
  **User**        | GET        | /CourseUserStatus/:CourseId,:UserId | Returns information about the status of a specified user in the specified course.                                                                        |
 |                | POST       | /CourseUserStatus/:CourseId,:UserId | Updates a user’s information in the specified course.                                                                                                    |
 |                | PUT        | /Course/:Id/AddUser                 | Adds a user to the specified course. The Id in the URL, refers to the course. The Id of the user is defined as a PUT field, in the request.              |
 |                | PUT        | /Course/:Id/RemoveUser              | Removes a user from the specified course. The Id in the URL, refers to the course. The Id of the user is defined as a PUT field, in the request.         |
-| **Curriculum** 
-                 
- **+**           
-                 
+| **Curriculum**                  
  **User**        | PUT        | /Curriculum/:Id/AddUser             | Adds a user to the specified curriculum. The Id in the URL, refers to the curriculum. The Id of the user is defined as a PUT field, in the request.      |
 |                | PUT        | /Curriculum/:Id/RemoveUser          | Removes a user from the specified curriculum. The Id in the URL, refers to the curriculum. The Id of the user is defined as a PUT field, in the request. |
 | **Group**      | GET        | /Groups                             | Returns the entire group list.                                                                                                                           |
 |                | GET        | /Group/:Id                          | Returns information about the group with the associated Id.                                                                                              |
-| **Group**      
-                 
- **+**           
-                 
+| **Group**                     
  **User**        | PUT        | /Group/:Id/AddUser                  | Adds a user to the specified group. The Id in the URL, refers to the group. The Id of the user is defined as a PUT field, in the request.                |
 |                | PUT        | /Group/:Id/RemoveUser               | Removes a user from the specified group. The Id in the URL, refers to the group. The Id of the user is defined as a PUT field, in the request.           |
 | **Plugin**     | GET        | /Plugins                            | Returns a list of the available plugins and their information.                                                                                           |
