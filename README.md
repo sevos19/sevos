@@ -117,7 +117,7 @@ network/system administrator to do it for you.
 	
 <a name="ApiCallRef"><h3>API Calls Reference</h3></a>
 <table>
-	<tr><th> Entity   	</td><th> HTTP </th><th> Call                             </th><th> Purpose                                                                                                                                            </th></tr>
+	<tr><th> Entity   	</th><th> HTTP </th><th> Call                             </th><th> Purpose                                                                                                                                            </th></tr>
 	<tr><td> Account    </td><td> POST </td><td> /Account/Status                  </td><td> Checks whether a user exists or not by providing the login name and the password.                                                                    </td></tr>
 	<tr><td rowspan="3"> Branch     </td><td> GET        </td><td> /Branches      </td><td> Returns the branch list.                                                                                                            </td></tr>
 	<tr>				<td> GET    </td><td> /Branch/:Id                         </td><td> Returns information about the branch with the associated Id.                                                                                             </td></tr>
@@ -175,19 +175,20 @@ message and optionally a more technical reason. For a live demonstration
 of the API calls and their responses (succeed and failed) you can use
 this [tool](#ApiLive).
 
-| ***HTTP Status Code*** | ***Reason***                                                                                          |
-|------------------------|-------------------------------------------------------------------------------------------------------|
-| **503**                | -   Service unavailable. API status is disabled.                                                      |
-| **405**                | -   Unsupported HTTP method. Only GET, POST and PUT are currently supported.                          |
-| **404**                | -   The requested API call does not exist. -   The requested entity (User, Course, etc) which is specified for example by an Id, does not exist.|
-| **401**                | -   Authentication required.                                                                          |
-| **400**                | -   General HTTP status code, if the action can’t be processed.                                       |
+<table>
+	<tr><th> HTTP Status Code </th>  <th> Reason </th></tr>                                                                                          
+	<tr> <td>503</td><td>-   Service </tr>unavailable. API status is disabled.</td></tr>                                                      
+	<tr> <td>405</td><td>-   Unsuppor</tr>ted HTTP method. Only GET, POST and PUT are currently supported.</td></tr>                          
+	<tr> <td>404</td><td>-   The requ</tr>ested API call does not exist. -   The requested entity (User, Course, etc) which is specified for example by an Id, does not exist.</td></tr>
+	<tr> <td>401</td><td>-   Authentication required.</td></tr>                                                                          
+	<tr> <td>400</td><td>-   General </tr>tr>HTTP status code, if the action can’t be processed.</td></tr>                                       
+</table>
 
 [Back to the Index](#DocIndex)
 
 ***
 
-<a name="ApiAuth"><h3>API Authentication</h3></a>
+<a </tr>name="ApiAuth"><h3>API Authentication</h3></a>
 
 eFront PRO API doesn’t offer any call that it’s public, in other words
 that it isn’t require authentication. So you MUST authenticate your
