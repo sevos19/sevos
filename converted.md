@@ -92,8 +92,8 @@ meets the requirements of the API.
 
 At this point, you may want to properly configure your web server to
 achieve 2 goals, if your web server is different than Apache. If your
-web server is Apache _there already exists an .htaccess configuration
-file inside the www/API folder_, but you have to enable the mod\_rewrite
+web server is Apache __there already exists an .htaccess configuration
+file inside the www/API folder__, but you have to enable the mod\_rewrite
 module (if not already enabled) on your own or inform your
 network/system administrator to do it for you.
 
