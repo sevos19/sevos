@@ -4,16 +4,10 @@
 
 (Version 1.0)
 
----
-
-
 >*The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
 "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
 document are to be interpreted as described in *[*RFC
 2119*](http://www.ietf.org/rfc/rfc2119.txt)*.*
-
----
-
 
 <a name="DocIndex"><h3>Documentation Index</h3></a>
 
@@ -39,21 +33,20 @@ in the following chapters.
 
 1.  Access through the command line (cURL):
 
-curl -u &lt;MY\_API\_KEY&gt;:
-<http://my-efront-pro.com/API/v1.0/System/Info>
+	curl -u &lt;MY\_API\_KEY&gt;:<http://my-efront-pro.com/API/v1.0/System/Info>
 
--   Replace &lt;MY\_API\_KEY&gt; with your API key.
+	-   Replace &lt;MY\_API\_KEY&gt; with your API key.
 
--   Keep the : symbol after your API key without a space before.
+	-   Keep the : symbol after your API key without a space before.
 
--   Provide your domain and the API location. In the above example we
-    use the API version 1.0 and request information about the system.
+	-   Provide your domain and the API location. In the above example we
+		use the API version 1.0 and request information about the system.
 
 2.  Access through the SDK:
 
-    $eFrontProSDK-&gt;GetAPI(‘System’)-&gt;GetInfo();
+    `$eFrontProSDK-&gt;GetAPI(‘System’)-&gt;GetInfo();`
 
--   See more on how to initialize $eFrontProSDK, [here](#SdkInstall).
+	-   See more on how to initialize $eFrontProSDK, [here](#SdkInstall).
 
 **`Note`**`: To use JSONP, append to the endpoint
 "?callback=&lt;myCallbackName&gt;" without the quotation marks.`
