@@ -12,7 +12,7 @@ document are to be interpreted as described in *[*RFC
 ***
 
 <a name="DocIndex"><h3>Documentation Index</h3></a>
-|Table of Containts						  |
+|	Table of Containts					  |
 |-----------------------------------------|
 | [Quick Start](#QuickStart)              |
 | [API Introduction](#ApiIntro)           |
