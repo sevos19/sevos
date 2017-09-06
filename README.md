@@ -1,17 +1,12 @@
-#
-
-#
-
-#
-
+<center>
 # EFRONT PRO 4
 
 ## REST JSON API DOCUMENTATION
-
+</center>
 (Version 1.0)
 
-_The key words &quot;MUST&quot;, &quot;MUST NOT&quot;, &quot;REQUIRED&quot;, &quot;SHALL&quot;, &quot;SHALL NOT&quot;, &quot;SHOULD&quot;, &quot;SHOULD NOT&quot;, &quot;RECOMMENDED&quot;, &quot;MAY&quot;, and &quot;OPTIONAL&quot; in this document are to be interpreted as described in__ _ [_RFC 2119_](http://www.ietf.org/rfc/rfc2119.txt)_._
-
+_The key words &quot;MUST&quot;, &quot;MUST NOT&quot;, &quot;REQUIRED&quot;, &quot;SHALL&quot;, &quot;SHALL NOT&quot;, &quot;SHOULD&quot;, &quot;SHOULD NOT&quot;, &quot;RECOMMENDED&quot;, &quot;MAY&quot;, and &quot;OPTIONAL&quot; in this document are to be interpreted as described in__ _ [_RFC 2119_](http://www.ietf.org/rfc/rfc2119.txt) .
+<center>
 Documentation Index
 
 | Quick Start | 4 |
@@ -25,6 +20,7 @@ Documentation Index
 | SDK Requirements | 11 |
 | SDK Installation | 12 |
 | SDK Examples | 13 |
+</center>
 
 Quick Start
 
