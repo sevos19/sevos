@@ -118,7 +118,7 @@ network/system administrator to do it for you.
 <a name="ApiCallRef"><h3>API Calls Reference</h3></a>
 
 || ***Entity***   || ***HTTP*** || ***Call***                          || ***Purpose***                                                                                                                                            ||
-||----------------||------------||-------------------------------------||----------------------------------------------------------------------------------------------------------------------------------------------------------||
+||----------------:||------------:||-------------------------------------:||----------------------------------------------------------------------------------------------------------------------------------------------------------:||
 || **Account**    || POST       || /Account/Status                     || Checks whether a user exists or not by providing the login name and the password.                                                                        ||
 || **Branch**     || GET        || /Branches                           || Returns the branch list.                                                                                                                                 ||
 ||                || GET        || /Branch/:Id                         || Returns information about the branch with the associated Id.                                                                                             ||
