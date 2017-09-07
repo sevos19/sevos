@@ -135,7 +135,7 @@ network/system administrator to do it for you.
 	<tr>				<td> PUT    </td><td> /Course/:Id/AddUser                 </td><td> Adds a user to the specified course. The Id in the URL, refers to the course. The Id of the user is defined as a PUT field, in the request.              </td></tr>
 	<tr>				<td> PUT    </td><td> /Course/:Id/RemoveUser              </td><td> Removes a user from the specified course. The Id in the URL, refers to the course. The Id of the user is defined as a PUT field, in the request.         </td></tr>             
 	<tr>				<td>GET 	</td><td> /Course/:Id/UserProgress/:UserId 	  </td><td> Returns the progress for a specific user in a specific course.</td></tr>
-	<tr>				<td>POST 	</td><td> /CourseUserStatus/:CourseId, :UserId</td><td> Sets the progress for a specific user in a specific course</td></tr>
+	<tr>				<td>POST 	</td><td> /CourseUserStatus/:CourseId, :UserId</td><td> Sets the progress for a specific user in a specific course.</td></tr>
 	<tr><td rowspan="2"> Curriculum & User        </td><td> PUT   </td><td> /Curriculum/:Id/AddUser             </td><td> Adds a user to the specified curriculum. The Id in the URL, refers to the curriculum. The Id of the user is defined as a PUT field, in the request.      </td></tr>
 	<tr>				<td> PUT    </td><td> /Curriculum/:Id/RemoveUser          </td><td> Removes a user from the specified curriculum. The Id in the URL, refers to the curriculum. The Id of the user is defined as a PUT field, in the request. </td></tr>
 	<tr><td rowspan="2"> Group      </td><td> GET        </td><td> /Groups        </td><td> Returns the entire group list.                                                                                                          				 </td></tr>
@@ -754,9 +754,12 @@ $autoLoginURL = $autoLoginResult\[**'data'**\];
 **echo** $e-&gt;getMessage();  
 }
 
+```
+
 **For each registered user, print information about courses:**
 
-**&lt;?php  
+```
+**<?php  
   
 try** {  
 *// See page 12 ..*
