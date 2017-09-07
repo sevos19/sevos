@@ -60,7 +60,7 @@ in the following chapters.
 
 <a name="ApiIntro"><h3>API Introduction</h3></a>
 
-eFrontPRO provides a comprehensive REST JSON API that allows
+eFrontPro provides a comprehensive REST JSON API that allows
 interaction with remote services. Authentication is based on an API key
 that is defined under your installation’s system settings. The
 functionality provided focuses on performing tasks meaningful for a
@@ -84,7 +84,7 @@ You can find the latest version of this guide
 For comments and suggestions, visit
 [here](http://www.efrontlearning.net/contact).
 
-The eFrontPRO team.
+The eFrontPro team.
 
 [Back to the Index](#DocIndex)
 
@@ -93,7 +93,7 @@ The eFrontPRO team.
 <a name="ApiRequirements"><h3>API Requirements</h3></a>
 
 API doesn’t have or require different technical requirements than eFront
-PRO. If your system meets the eFrontPRO's requirements, then it also
+PRO. If your system meets the eFrontPro's requirements, then it also
 meets the requirements of the API.
 
 At this point, you may want to properly configure your web server to
@@ -201,13 +201,13 @@ this [tool](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggeh
 
 <a name="ApiAuth"><h3>API Authentication</h3></a>
 
-eFrontPRO API doesn’t offer any call that it’s public, in other words
+eFrontPro API doesn’t offer any call that it’s public, in other words
 that it isn’t require authentication. So you MUST authenticate your
 requests in order to use the API. But before this step, you have to
 enable its status and find out your personal private API key.
 
 To enable the API, just navigate to your “**System Settings**” through
-the eFrontPRO administration control panel and proceed to the “**API**”
+the eFrontPro administration control panel and proceed to the “**API**”
 tab. Check the “**Enable API**” checkbox and click on the “**Save**”
 button.
 
@@ -224,7 +224,7 @@ calls) with your personal private key, you can read [here](#SdkInstall).
 
 <a name="SdkIntro"><h3>API SDK Introduction</h3></a>
 
-With the eFrontPRO SDK, you will be able to use its API easily and
+With the eFrontPro SDK, you will be able to use its API easily and
 efficiently without advanced programming knowledge.
 
 Programming Language: **PHP** | Version: **2.0.0** | API Support:
@@ -236,7 +236,7 @@ Programming Language: **PHP** | Version: **2.0.0** | API Support:
 
 <a name="SdkRequirements"><h3>SDK Requirements</h3></a>
 
-If your system meets the eFrontPRO's requirements, then it also meets
+If your system meets the eFrontPro's requirements, then it also meets
 the requirements of the SDK.
 
 [Back to the Index](#DocIndex)
@@ -255,7 +255,7 @@ follow the below steps in order to work with the SDK:
     files for a domain name are stored. You SHOULD contact your
     administrator in case that you aren’t sure about this action. It’s
     RECOMMENDED to extract the contents inside the **www** folder of
-    your eFrontPRO web application.
+    your eFrontPro web application.
 
 3.  Create a php file inside the Source folder (the folder that the
     AutoLoader.php file is located). There is no restriction about the
