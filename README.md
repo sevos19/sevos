@@ -368,7 +368,7 @@ $eFrontProSDK->GetAPI(‘Branch’)->Create([
 
 `$eFrontProSDK->GetAPI(‘Course’)->GetInfo($courseId);`
 
-***Get all curiculla*.**
+***Get all curicula*.**
 
 `$eFrontProSDK->GetAPI(‘Curriculums’)->GetAll();`
 
