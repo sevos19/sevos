@@ -84,8 +84,6 @@ You can find the latest version of this guide
 For comments and suggestions, visit
 [here](http://www.efrontlearning.net/contact).
 
-The eFrontPro team.
-
 [Back to the Index](#DocIndex)
 
 ***
