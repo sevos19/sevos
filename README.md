@@ -36,7 +36,7 @@ in the following chapters.
 
 1.  Access through the command line (cURL):
 
-	`curl -u &lt;MY\_API\_KEY&gt;:<http://my-efront-pro.com/API/v1.0/System/Info>`
+	`curl -u <MY_API_KEY>: http://my-efront-pro.com/API/v1.0/System/Info`
 
 	-   Replace &lt;MY\_API\_KEY&gt; with your API key.
 
@@ -47,7 +47,7 @@ in the following chapters.
 
 2.  Access through the SDK:
 
-    `$eFrontProSDK-&gt;GetAPI(‘System’)-&gt;GetInfo();`
+    `$eFrontProSDK->GetAPI('System')->GetInfo();`
 
 	-   See more on how to initialize $eFrontProSDK, [here](#SdkInstall).
 
@@ -265,25 +265,22 @@ follow the below steps in order to work with the SDK:
     start making calls:
 
     ```
+
 	<?php
 
     include ‘AutoLoader.php’;
 
-    use Epignosis\\eFrontPro\\Sdk\\eFrontProSDK as eFrontProSDK;
-
-    use Epignosis\\eFrontPro\\Sdk\\Factory\\Handler\\API as Api;
-
-    use Epignosis\\eFrontPro\\Sdk\\Request\\Handler\\cURL as cUrl;
+    use Epignosis\eFrontPro\Sdk\eFrontProSDK as eFrontProSDK;
+    use Epignosis\eFrontPro\Sdk\Factory\Handler\API as Api;
+    use Epignosis\eFrontPro\Sdk\Request\Handler\cURL as cUrl;
 
     $apiVersion = ‘1.0’;
-
     $apiLocation = ‘my-domain.com/API’;
-
     $apiKey = ‘0123456789abcdef’;
 
-    $eFrontProSDK = **new** eFrontProSDK(**new** Api(new cUrl));
+    $eFrontProSDK = new eFrontProSDK(new Api(new cUrl));
+    $eFrontProSDK->Config($apiVersion, $apiLocation, $apiKey);
 
-    $eFrontProSDK-&gt;Config($apiVersion, $apiLocation, $apiKey);
 	```
 	
 [Back to the Index](#DocIndex)
@@ -313,136 +310,128 @@ inside a try/catch block. For example:
 
 ```
 try {
-
 // various SDK commands ..
-
-} catch (\\Exception $e) {
-
-echo ‘Oops! An error occurred. \[’, $e-&gt;getMessage(), ‘, ’,
-$e-&gt;getCode(), ‘\]’;
-
+} catch (\Exception $e) {
+echo ‘Oops! An error occurred. [’, $e->getMessage(), ‘, ’, $e->getCode(), ‘]’;
 }
+
 ```
 
 ***BASIC EXAMPLES***
 
 ***Check the status of an account.***
 
-`$eFrontProSDK-&gt;GetAPI(‘Account’)-&gt;Exists($loginName, $password);`
+`$eFrontProSDK->GetAPI(‘Account’)->Exists($loginName, $password);`
 
 ***Get all the branches*.**
 
-`$eFrontProSDK-&gt;GetAPI(‘BranchList’)-&gt;GetAll();`
+`$eFrontProSDK->GetAPI(‘BranchList’)->GetAll();`
 
 ***Get information about a branch*.** GetInfo method, accepts a positive
 integer as the branch Id.
 
-`$eFrontProSDK-&gt;GetAPI(‘Branch’)-&gt;GetInfo($branchId);`
+`$eFrontProSDK->GetAPI(‘Branch’)->GetInfo($branchId);`
 
 ***Create a branch*.** Create method, accepts an associative array as
 the branch information to be created. The required information consisted
 of the "name" and "url"; "parent\_ID" and "public\_ID" are optional.
 
 ```
-$eFrontProSDK-&gt;GetAPI(‘Branch’)-&gt;Create(\[
 
-'name' =&gt; 'foo', 'url' =&gt; 'foo', 'parent\_ID' =&gt; 10,
-'public\_ID' =&gt; 'abc123'
+$eFrontProSDK->GetAPI(‘Branch’)->Create([
+	'name' => 'foo', 'url' => 'foo', 'parent_ID' => 10, 'public_ID' => 'abc123'
+]);
 
-\]);
 ```
 
 ***Add a user in a branch*.** AddRelation method, accepts 2 parameters
 which both are positive integers. The 1<sup>st</sup> one refers to the
 user’s Id and the 2<sup>nd</sup> to the branch’s Id.
 
-```
-$eFrontProSDK-&gt;GetAPI(‘BranchUser’)-&gt;AddRelation($userId,
-$branchId);
-```
+
+`$eFrontProSDK->GetAPI(‘BranchUser’)->AddRelation($userId, $branchId);`
+
 
 ***Get all the categories (tree structured)*.**
 
-`$eFrontProSDK-&gt;GetAPI(‘CategoryList’)-&gt;GetAll();`
+`$eFrontProSDK->GetAPI(‘CategoryList’)->GetAll();`
 
 ***Get information about a category*.** GetInfo method, accepts a
 positive integer as the category Id.
 
-`$eFrontProSDK-&gt;GetAPI(‘Category’)-&gt;GetInfo($categoryId);`
+`$eFrontProSDK->GetAPI(‘Category’)->GetInfo($categoryId);`
 
 ***Get all courses*.**
 
-`$eFrontProSDK-&gt;GetAPI(‘CourseList’)-&gt;GetAll();`
+`$eFrontProSDK->GetAPI(‘CourseList’)->GetAll();`
 
 ***Get information about a course*.** GetInfo method, accepts a positive
 integer as the course Id.
 
-`$eFrontProSDK-&gt;GetAPI(‘Course’)-&gt;GetInfo($courseId);`
+`$eFrontProSDK->GetAPI(‘Course’)->GetInfo($courseId);`
 
-***Get all courses*.**
+***Get all curiculla*.**
 
-`$eFrontProSDK-&gt;GetAPI(‘CurriculumList’)-&gt;GetAll();`
+`$eFrontProSDK->GetAPI(‘Curriculums’)->GetAll();`
 
 ***Get all the groups*.**
 
-`$eFrontProSDK-&gt;GetAPI(‘GroupList’)-&gt;GetAll();`
+`$eFrontProSDK->GetAPI(‘GroupList’)->GetAll();`
 
 ***Get information about a group*.** GetInfo method, accepts a positive
 integer as the group Id.
 
-`$eFrontProSDK-&gt;GetAPI(‘Group’)-&gt;GetInfo($groupId);`
+`$eFrontProSDK->GetAPI(‘Group’)->GetInfo($groupId);`
 
 ***Get all the plugins*.**
 
-`$eFrontProSDK-&gt;GetAPI(‘Plugin’)-&gt;GetAll();`
+`$eFrontProSDK->GetAPI(‘Plugin’)->GetAll();`
 
 ***Get information about a plugin*.** GetInfo method, accepts a string
 as the plugin name.
 
-`$eFrontProSDK-&gt;GetAPI(‘Plugin’)-&gt;GetInfo($pluginName);`
+`$eFrontProSDK->GetAPI(‘Plugin’)->GetInfo($pluginName);`
 
 ***Notify the specified plugin by sending some data*.** Notify method,
 accepts a string as the plugin name (1<sup>st</sup> parameter) and an
 array (2<sup>nd</sup> parameter) with the custom notification data.
 
-`$eFrontProSDK-&gt;GetAPI(‘Plugin’)-&gt;Notify($pluginName, $data);`
+`$eFrontProSDK->GetAPI(‘Plugin’)->Notify($pluginName, $data);`
 
 ***Get all the users*.**
 
-`$eFrontProSDK-&gt;GetAPI(‘UserList’)-&gt;GetAll();`
+`$eFrontProSDK->GetAPI(‘UserList’)->GetAll();`
 
 ***Get all the users by their e-mail address*.** GetAllByMail method,
 accepts a string as the e-mail address of a user.
 
-`$eFrontProSDK-&gt;GetAPI(‘UserList’)-&gt;GetAllByMail($mailAddress);`
+`$eFrontProSDK->GetAPI(‘UserList’)->GetAllByMail($mailAddress);`
 
 ***Get information about a user*.** GetInfo method, accepts a positive
 integer as the user Id.
 
-`$eFrontProSDK-&gt;GetAPI(‘User’)-&gt;GetInfo($userId);`
+`$eFrontProSDK->GetAPI(‘User’)->GetInfo($userId);`
 
 ***Activate a user*.** Activate method, accepts a positive integer as
 the user Id.
 
-`$eFrontProSDK-&gt;GetAPI(‘User’)-&gt;Activate($userId);`
+`$eFrontProSDK->GetAPI(‘User’)->Activate($userId);`
 
 ***Deactivate a user*.** Deactivate method, accepts a positive integer
 as the user Id.
 
-`$eFrontProSDK-&gt;GetAPI(‘User’)-&gt;Deactivate($userId);`
+`$eFrontProSDK->GetAPI(‘User’)->Deactivate($userId);`
 
 ***Create a user*.** Create method, accepts an associative array as the
 user’s information to be created. The required information consisted of
 the login, name, surname, email and password fields.
 
 ```
-$eFrontProSDK-&gt;GetAPI(‘User’)-&gt;Create (\[
 
-'login' =&gt; 'foo', 'name' =&gt; 'bar', 'surname' =&gt; 'baz',
+$eFrontProSDK->GetAPI(‘User’)->Create ([
+	'login' => 'foo', 'name' => 'bar', 'surname' => 'baz', 'email' => 'foo@bar.buz', 'password' => 'blackWhale'
+]);
 
-'email' =&gt; 'foo@bar.buz', 'password' =&gt; 'blackWhale'
-
-\]);
 ```
 
 ***Edit a user*.** Edit method, accepts 2 parameters. The 1<sup>st</sup>
@@ -452,30 +441,26 @@ the array are the same as the above method (Create) but aren’t required
 all of them, so you can edit only the information which you want.
 
 ```
-$eFrontProSDK-&gt;GetAPI(‘User’)-&gt;Edit (
 
-$userId, \['login' =&gt; 'foo1', 'password' =&gt; 'blackWhale123'\]
-
+$eFrontProSDK->GetAPI(‘User’)->Edit (
+ 	$userId, ['login' => 'foo1', 'password' => 'blackWhale123']
 );
+
 ```
 
 ***Add a user in a group*.** AddRelation method, accepts 2 parameters
 which both are positive integers. The 1<sup>st</sup> one refers to the
 user’s Id and the 2<sup>nd</sup> to the group’s Id.
 
-```
-$eFrontProSDK-&gt;GetAPI(‘UserGroup’)-&gt;AddRelation($userId,
-$groupId);
-```
+
+`$eFrontProSDK->GetAPI(‘UserGroup’)->AddRelation($userId, $groupId);`
+
 
 ***Remove a user from a group*.** RemoveRelation method, accepts 2
 parameters which both are positive integers. The 1<sup>st</sup> one
 refers to the user’s Id and the 2<sup>nd</sup> to the group’s Id.
 
-```
-$eFrontProSDK-&gt;GetAPI(‘UserGroup’)-&gt;RemoveRelation($userId,
-$groupId);
-```
+`$eFrontProSDK->GetAPI(‘UserGroup’)->RemoveRelation($userId, $groupId);`
 
 ***Add a user in a course*.** AddRelation method, accepts 3 parameters
 which. The 1<sup>st</sup> one refers to the user’s Id (positive
@@ -484,10 +469,7 @@ integer), the 2<sup>nd</sup> to the course’s Id (positive integer) and
 course belongs to a curriculum. The last parameter is set to false by
 default.
 
-```
-$eFrontProSDK-&gt;GetAPI(‘CourseUser’)-&gt;AddRelation($userId,
-$courseId, $force);
-```
+`$eFrontProSDK->GetAPI(‘CourseUser’)->AddRelation($userId, $courseId, $force);`
 
 ***Add a user in a curriculum*.** AddRelation method, accepts 3
 parameters which. The 1<sup>st</sup> one refers to the user’s Id
@@ -495,20 +477,14 @@ parameters which. The 1<sup>st</sup> one refers to the user’s Id
 integer) and 3rd to whether you want to force the operation or not. The
 last parameter is set to false by default.
 
-```
-$eFrontProSDK-&gt;GetAPI(‘CurriculumUser’)-&gt;AddRelation($userId,
-$curriculumId, $force);
-```
+`$eFrontProSDK->GetAPI(‘CurriculumUser’)->AddRelation($userId, $curriculumId, $force);`
 
 ***Check the status of a user in a course*.** CheckStatus method,
 accepts 2 parameters which both are positive integers. The
 1<sup>st</sup> one refers to the user’s Id and the 2<sup>nd</sup> to the
 course’s Id.
 
-```
-$eFrontProSDK-&gt;GetAPI(‘CourseUser’)-&gt;CheckStatus($userId,
-$courseId);
-```
+`$eFrontProSDK->GetAPI(‘CourseUser’)->CheckStatus($userId, $courseId);`
 
 ***Update the status of a user in a course*.** UpdateStatus method,
 accepts 3 parameters. The first 2 are positive integers. The
@@ -516,158 +492,117 @@ accepts 3 parameters. The first 2 are positive integers. The
 course’s Id. The last is an array which contains the update info.
 
 ```
-$eFrontProSDK-&gt;GetAPI(‘CourseUser’)-&gt;UpdateStatus (
 
-$userId, $courseId,
-
-\[‘score’ =&gt; 100, ‘to\_timestamp’ =&gt; 1418893082, ‘status’ =&gt;
-‘completed’\]
-
+$eFrontProSDK->GetAPI(‘CourseUser’)->UpdateStatus (
+    $userId, $courseId,
+    [‘score’ => 100, ‘to_timestamp’ => 1418893082, ‘status’ => ‘completed’]
 );
+
 ```
 
 ***Remove a user from a course***. RemoveRelation method, accepts 2
 parameters which both are positive integers. The 1<sup>st</sup> one
 refers to the user’s Id and the 2<sup>nd</sup> to the course’s Id.
 
-```
-$eFrontProSDK-&gt;GetAPI(‘CourseUser’)-&gt;RemoveRelation($userId,
-$courseId);
-```
+`$eFrontProSDK->GetAPI(‘CourseUser’)->RemoveRelation($userId, $courseId);`
 
 ***Remove a user from a curriculum***. RemoveRelation method, accepts 2
 parameters which both are positive integers. The 1<sup>st</sup> one
 refers to the user’s Id and the 2<sup>nd</sup> to the curriculum’s Id.
 
-```
-$eFrontProSDK-&gt;GetAPI(‘CurriculumUser’)-&gt;RemoveRelation($userId,
-$curriculumId);
-```
+`$eFrontProSDK->GetAPI(‘CurriculumUser’)->RemoveRelation($userId, $curriculumId);`
 
 ***Get information about the system***.
 
-`$eFrontProSDK-&gt;GetAPI(‘System’)-&gt;GetInfo();`
+`$eFrontProSDK->GetAPI(‘System’)->GetInfo();`
 
 ***Autologin a user*.** Autologin method, accepts a string as the user’s
 login name.
 
-`$eFrontProSDK-&gt;GetAPI(‘User’)-&gt;AutoLogin($loginName);`
+`$eFrontProSDK->GetAPI(‘User’)->AutoLogin($loginName);`
 
 ***Logout a user*.** Logout method, accepts a string as the user’s login
 name.
 
-`$eFrontProSDK-&gt;GetAPI(‘User’)-&gt;Logout($loginName);`
+`$eFrontProSDK->GetAPI(‘User’)->Logout($loginName);`
 
 ***ADVANCED EXAMPLES***
 
 **Logout all the users:**
 
 ```
-try{
+try {
 
-*// See page 12 ..*
+    // Fetch all the users:
+    $userList = json_decode (
+        $eFrontProSDK->GetAPI('UserList')->GetAll(), true
+    );
+    
+    // Check if the call was succeed:
+    if (!$userList['success']) {
+        throw new \Exception ( $userList['error']['message'], $userList['error']['code'] );
+    }
 
-*// Fetch all the users:*
-
-$userList = json\_decode (
-
-$eFrontProSDK-&gt;GetAPI(**'UserList'**)-&gt;GetAll(), **true**
-
-);
-
-*// Check if the call was succeed:*
-
-**if** (!$userList\[**'success'**\]) {  
-**throw new** \\Exception (
-
-$userList\[**'error'**\]\[**'message'**\],
-$userList\[**'error'**\]\[**'code'**\]  
-);  
-}
-
-*// Iterate through the user list:*  
-**foreach** ($userList\[**'data'**\] **as** $user) {  
-$logoutResponse = json\_decode (
-
-$eFrontProSDK-&gt;GetAPI(**'User'**)-&gt;Logout($user\[**'login'**\]),
-
-**true**
-
-);  
-  
-**echo 'User &lt;b&gt;'**, $user\[**'login'**\], **'&lt;/b&gt; was '**;
-
-*// Check whether the logout process was succeed or not:*  
-**if** ($logoutResponse\[**'success'**\]) {  
-**echo 'logout with success.&lt;br&gt;'**;  
-} **else** {  
-**echo 'not possible to logout.&lt;br&gt;'**;  
-}  
-}  
-} **catch** (\\Exception $e) {  
-**echo** $e-&gt;getMessage();  
+    // Iterate through the user list:
+    foreach ($userList['data'] as $user) {
+        $logoutResponse = json_decode (
+            $eFrontProSDK->GetAPI('User')->Logout($user['login']),
+            true
+        );
+        
+        echo 'User <b>', $user['login'], '</b> was ';
+    
+        // Check whether the logout process was succeed or not:
+        if ($logoutResponse['success']) {
+            echo 'logout with success.<br>';
+        } else {
+            echo 'not possible to logout.<br>';
+        }
+    }
+    
+} catch (\Exception $e) {
+    echo $e->getMessage();
 }
 ```
 
 **Activate all the users with odd Id and deactivate these with even Id:**
 
 ```
-try{
+try {
 
-*// See page 12 ..*
-
-*// Fetch all the users:*
-
-$userList = json\_decode (
-
-$eFrontProSDK-&gt;GetAPI(**'UserList'**)-&gt;GetAll(), **true**
-
-);
-
-*// Check if the call was succeed:*
-
-**if** (!$userList\[**'success'**\]) {  
-**throw new** \\Exception (
-
-$userList\[**'error'**\]\[**'message'**\],
-$userList\[**'error'**\]\[**'code'**\]  
-);  
-}
-
-*// Iterate through the user list:*  
-**foreach** ($userList\[**'data'**\] **as** $user) {  
-$apiUser = $eFrontProSDK-&gt;GetAPI(**'User'**);
-
-$evenNumber = $user\[**'id'**\] % 2 == 0;
-
-$response =
-
-($evenNumber)
-
-? json\_decode (  
-$eFrontProSDK-&gt;GetAPI(**'User'**)-&gt;Deactivate($user\[**'id'**\]),  
-**true  
-**)  
-: json\_decode (  
-$eFrontProSDK-&gt;GetAPI(**'User'**)-&gt;Activate($user\[**'id'**\]),  
-**true  
-**);
-
-**echo 'User &lt;b&gt;'**, $user\[**'login'**\], **'&lt;/b&gt; was '**;
-
-**if** ($response\[**'success'**\]) {  
-**echo** $evenNumber ? **'deactivated'** : **'activated'**, **' with
-success.&lt;br&gt;'**;
-
-} **else** {  
-**echo 'not possible to '**, $evenNumber ? **'deactivated'** :
-**'activated'**, **'&lt;br&gt;'**;
-
-}
-
-}  
-} **catch** (\\Exception $e) {  
-**echo** $e-&gt;getMessage();  
+    // Fetch all the users:
+    $userList = json_decode (
+        $eFrontProSDK->GetAPI('UserList')->GetAll(), true
+    );
+    
+    // Check if the call was succeed:
+    if (!$userList['success']) {
+        throw new \Exception ($userList['error']['message'], $userList['error']['code']);
+    }
+    
+    // Iterate through the user list:
+    foreach ($userList['data'] as $user) {
+        $apiUser = $eFrontProSDK->GetAPI('User');
+        $evenNumber = $user['id'] % 2 == 0;
+        $response = 
+            ($evenNumber) 
+                ? json_decode ( 
+                    $eFrontProSDK->GetAPI('User')->Deactivate($user['id']), true
+                  )
+                : json_decode (
+                    $eFrontProSDK->GetAPI('User')->Activate($user['id']), true
+                );
+    
+        echo 'User <b>', $user['login'], '</b> was ';
+        
+        if ($response['success']) {
+            echo $evenNumber ? 'deactivated' : 'activated', ' with success.<br>';
+        } else {
+            echo 'not possible to ', $evenNumber ? 'deactivated' : 'activated', '<br>';
+        }
+    }
+} catch (\Exception $e) {
+    echo $e->getMessage();
 }
 ```
 
@@ -675,83 +610,64 @@ success.&lt;br&gt;'**;
 
 ```
 try {
-
-*// See page 12 ..*
-
-*// Create the user:  
-* $userInfo = \[  
-**'login'** =&gt; **'efront'**,  
-**'name'** =&gt; **'efront'**,  
-**'surname'** =&gt; **'efront'**,  
-**'email'** =&gt; **'xarhsdev@efrontlearning.net'**,  
-**'password'** =&gt; **'foobarbuz'  
-** \];  
-  
-$userCreation = json\_decode (  
-$eFrontProSDK-&gt;GetAPI(**'User'**)-&gt;Create($userInfo), **true  
-** );  
-  
-*// Throw an exception if the creation was failed:  
-* **if** (!$userCreation\[**'success'**\]) {  
-**throw new** \\Exception (  
-$userCreation\[**'error'**\]\[**'message'**\],
-$userCreation\[**'error'**\]\[**'code'**\]  
-);  
-}  
-  
-*// Get the course list:  
-* $courseList = json\_decode (  
-$eFrontProSDK-&gt;GetAPI(**'CourseList'**)-&gt;GetAll(), **true  
-** );  
-  
-*// Throw an exception if the call was failed:  
-* **if** (!$courseList\[**'success'**\]) {  
-**throw new** \\Exception (  
-$courseList\[**'error'**\]\[**'message'**\],
-$courseList\[**'error'**\]\[**'code'**\]  
-);  
-}  
-  
-*// Assign our user to the 1st course of the course list:  
-* $course = *reset*($courseList\[**'data'**\]);  
-  
-$courseAssignResult = json\_decode (  
-$eFrontProSDK-&gt;GetAPI(**'CourseUser'**)-&gt;AddRelation (  
-*// The Create method was returned his Id:  
-*$userCreation\[**'data'**\]\[**'id'**\], $course\[**'id'**\]  
-),  
-**true  
-** );
-
-*// Throw an exception if the call was failed:  
-* **if** (!$courseAssignResult\[**'success'**\]) {  
-**throw new** \\Exception (  
-$courseAssignResult\[**'error'**\]\[**'message'**\],
-
-$courseAssignResult\[**'error'**\]\[**'code'**\]  
-);  
-}  
-  
-*// Fetch the auto-login URL:  
-* $autoLoginResult = json\_decode (  
-$eFrontProSDK-&gt;GetAPI(**'User'**)-&gt;Autologin($userInfo\[**'login'**\]),
-**true  
-** );  
-  
-*// Throw an exception if the call was failed:  
-* **if** (!$autoLoginResult\[**'success'**\]) {  
-**throw new** \\Exception (  
-$autoLoginResult\[**'error'**\]\[**'message'**\],
-$autoLoginResult\[**'error'**\]\[**'code'**\]  
-);  
-}  
-  
-$autoLoginURL = $autoLoginResult\[**'data'**\];  
-  
-*// ..*
-
-} **catch** (\\Exception $e) {  
-**echo** $e-&gt;getMessage();  
+    
+    // Create the user:
+    $userInfo = [
+        'login'    => 'efront',
+        'name'     => 'efront',
+        'surname'  => 'efront',
+        'email'    => 'xarhsdev@efrontlearning.net',
+        'password' => 'foobarbuz'
+    ];
+    
+    $userCreation = json_decode (
+        $eFrontProSDK->GetAPI('User')->Create($userInfo), true
+    );
+    
+    // Throw an exception if the creation was failed:
+    if (!$userCreation['success']) {
+        throw new \Exception ( $userCreation['error']['message'], $userCreation['error']['code']);
+    }
+    
+    // Get the course list:
+    $courseList = json_decode (
+        $eFrontProSDK->GetAPI('CourseList')->GetAll(), true
+    );
+    
+    // Throw an exception if the call was failed:
+    if (!$courseList['success']) {
+        throw new \Exception ($courseList['error']['message'], $courseList['error']['code']);
+    }
+    
+    // Assign our user to the 1st course of the course list:
+    $course = reset($courseList['data']);
+    
+    $courseAssignResult = json_decode (
+        $eFrontProSDK->GetAPI('CourseUser')->AddRelation (
+            // The Create method was returned his Id:
+            $userCreation['data']['id'], $course['id']
+        ), true
+    );
+    
+    // Throw an exception if the call was failed:
+    if (!$courseAssignResult['success']) {
+        throw new \Exception ($courseAssignResult['error']['message'], $courseAssignResult['error']['code']);
+    }
+    
+    // Fetch the auto-login URL:
+    $autoLoginResult = json_decode (
+        $eFrontProSDK->GetAPI('User')->Autologin($userInfo['login']), true
+    );
+    
+    // Throw an exception if the call was failed:
+    if (!$autoLoginResult['success']) {
+        throw new \Exception ($autoLoginResult['error']['message'], $autoLoginResult['error']['code']);
+    }
+    
+    $autoLoginURL = $autoLoginResult['data'];
+    // ..
+} catch (\Exception $e) {
+    echo $e->getMessage();
 }
 
 ```
@@ -759,90 +675,77 @@ $autoLoginURL = $autoLoginResult\[**'data'**\];
 **For each registered user, print information about courses:**
 
 ```
-**<?php  
-  
-try** {  
-*// See page 12 ..*
-
-*// Fetch the user list:  
-*$userList = json\_decode(  
-$eFrontProSDK-&gt;GetAPI(**'UserList'**)-&gt;GetAll(), **true  
-**);  
-  
-**if** (!$userList\[**'success'**\]) {  
-**throw new** \\RuntimeException (  
-$userList\[**'error'**\]\[**'message'**\],  
-$userList\[**'error'**\]\[**'code'**\]  
-);  
-}  
-  
-**echo  
-'&lt;table border=3 cellpadding=10&gt;&lt;tbody&gt;&lt;tr&gt;'**,  
-**'&lt;th&gt;Id&lt;/th&gt;'**,  
-**'&lt;th&gt;Login&lt;/th&gt;'**,  
-**'&lt;th&gt;Name&lt;/th&gt;'**,  
-**'&lt;th&gt;Surname&lt;/th&gt;'**,  
-**'&lt;th&gt;e-Mail&lt;/th&gt;'**,  
-**'&lt;th&gt;Courses \[Name, Status\]&lt;/th&gt;'**,  
-**'&lt;th&gt;Avg. Score&lt;/th&gt;&lt;/tr&gt;'**;  
-  
-**foreach** ($userList\[**'data'**\] **as** $user) {  
-*// For the current user fetch the courses that he/she is  
-// registered to:  
-*$userInfo = json\_decode (  
-$eFrontProSDK-&gt;GetAPI(**'User'**)-&gt;GetInfo($user\[**'id'**\]),
-**true  
-**);  
-  
-**if** (!$userInfo\[**'success'**\]) {  
-**throw new** \\RuntimeException (  
-$userInfo\[**'error'**\]\[**'message'**\],  
-$userInfo\[**'error'**\]\[**'code'**\]  
-);  
-}
-
-**echo  
-'&lt;tr&gt;&lt;td&gt;'**, $user\[**'id'**\], **'&lt;/td&gt;'**,  
-**'&lt;td&gt;'**, $user\[**'login'**\], **'&lt;/td&gt;'**,  
-**'&lt;td&gt;'**, $user\[**'name'**\], **'&lt;/td&gt;'**,  
-**'&lt;td&gt;'**, $user\[**'surname'**\], **'&lt;/td&gt;'**,  
-**'&lt;td&gt;'**, $user\[**'email'**\], **'&lt;/td&gt;&lt;td&gt;'**;  
-  
-$courseList = $userInfo\[**'data'**\]\[**'courses'**\]\[**'list'**\];  
-  
-**if** (**empty**($courseList)) {  
-$avgScore = **'-'**;  
-  
-**echo '-'**;  
-} **else** {  
-$avgScore = 0.0;  
-$c = 0;  
-  
-**foreach** ($courseList **as** $info) {  
-$avgScore += $info\[**'score'**\];  
-$c++;  
-  
-**echo  
-***sprintf* (  
-**'\[%s, %s\]&lt;br&gt;'**,  
-$info\[**'formatted\_name'**\],  
-$info\[**'status'**\]  
-);  
-}  
-  
-**if** ($c &gt; 0) {  
-$avgScore /= $c;  
-$avgScore = *round*($avgScore, 2);  
-}  
-}  
-  
-**echo '&lt;/td&gt;&lt;td&gt;'** . $avgScore .
-**'&lt;/td&gt;&lt;/tr&gt;'**;  
-}  
-  
-**echo '&lt;/tbody&gt;&lt;/table&gt;'**;  
-} **catch** (\\Exception $e) {  
-**echo** $e-&gt;getMessage();  
+try {
+    
+    // Fetch the user list:
+    $userList = json_decode(
+        $eFrontProSDK->GetAPI('UserList')->GetAll(), true
+    );
+    if (!$userList['success']) {
+        throw new \RuntimeException ( $userList['error']['message'], $userList['error']['code']);
+    }
+    
+    echo
+        '<table border=3 cellpadding=10><tbody><tr>',
+        '<th>Id</th>',
+        '<th>Login</th>',
+        '<th>Name</th>',
+        '<th>Surname</th>',
+        '<th>e-Mail</th>',
+        '<th>Courses [Name, Status]</th>',
+        '<th>Avg. Score</th></tr>';
+        
+    foreach ($userList['data'] as $user) {
+        // For the current user fetch the courses that he/she is
+        // registered to:
+        
+        $userInfo = json_decode (
+            $eFrontProSDK->GetAPI('User')->GetInfo($user['id']), true
+        );
+        
+        if (!$userInfo['success']) {
+            throw new \RuntimeException ($userInfo['error']['message'], $userInfo['error']['code']);
+        }
+    
+        echo
+            '<tr><td>', $user['id'], '</td>',
+            '<td>', $user['login'], '</td>',
+            '<td>', $user['name'], '</td>',
+            '<td>', $user['surname'], '</td>',
+            '<td>', $user['email'], '</td><td>';
+        
+        $courseList = $userInfo['data']['courses']['list'];
+        if (empty($courseList)) {
+            $avgScore = '-';
+            echo '-';
+        } else {
+            $avgScore = 0.0;
+            $c = 0;
+            
+            foreach ($courseList as $info) {
+                $avgScore += $info['score'];
+                $c++;
+    
+                echo
+                    sprintf (
+                        '[%s, %s]<br>',
+                        $info['formatted_name'],
+                        $info['status']
+                    );
+             }
+    
+            if ($c > 0) {
+                $avgScore /= $c;
+                $avgScore = round($avgScore, 2);
+            }
+        }
+        echo '</td><td>' . $avgScore . '</td></tr>';
+    }
+    
+    echo '</tbody></table>';
+    
+} catch (\Exception $e) {
+    echo $e->getMessage();
 }
 ```
 <a name="ApiLive"></a>
