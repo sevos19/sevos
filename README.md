@@ -334,7 +334,7 @@ try {
 
 ***Create a branch*.**
  `Create` method, accepts an associative array as the branch information to be created. The required information consisted
- of the `"name"` and `"url";` `"parent_ID"` and `"public_ID"` are optional.
+ of the `"name"` and `"url"`, `"parent_ID"` and `"public_ID"` are optional.
 
 ```
 
