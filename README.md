@@ -394,7 +394,7 @@ $eFrontProSDK->GetAPI(‘Branch’)->Create([
 
 ***Notify the specified plugin by sending some data*.**
  Notify method, accepts a string as the plugin name (1<sup>st</sup> parameter) and an
-array (2<sup>nd</sup> parameter) with the custom notification data.
+ array (2<sup>nd</sup> parameter) with the custom notification data.
 
 `$eFrontProSDK->GetAPI(‘Plugin’)->Notify($pluginName, $data);`
 
@@ -429,7 +429,7 @@ array (2<sup>nd</sup> parameter) with the custom notification data.
 ```
 
 $eFrontProSDK->GetAPI(‘User’)->Create ([
-	'login' => 'foo', 'name' => 'bar', 'surname' => 'baz', 'email' => 'foo@bar.buz', 'password' => 'blackWhale'
+   'login' => 'foo', 'name' => 'bar', 'surname' => 'baz', 'email' => 'foo@bar.buz', 'password' => 'blackWhale'
 ]);
 
 ```
