@@ -289,7 +289,7 @@ follow the below steps in order to work with the SDK:
 
 <a name="SdkExample"><h3>SDK Examples</h3></a>
 
-In the [previous chapter](#SdkInstall) you learn how you can install the
+In the [section](#SdkInstall) you learn how you can install the
 SDK. Moreover on step 4, you initialize the SDK with its dependencies,
 the version and of course your API key and its location.
 
