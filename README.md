@@ -51,8 +51,8 @@ in the following chapters.
 
 	-   See more on how to initialize $eFrontProSDK, [here](#SdkInstall).
 
-**`Note`**`: To use JSONP, append to the endpoint
-"?callback=<myCallbackName>" without the quotation marks.`
+>**Note**: To use JSONP, append to the endpoint
+`"?callback=<myCallbackName>"` without the quotation marks.
 
 [Back to the Index](#DocIndex)
 
