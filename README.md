@@ -310,9 +310,9 @@ inside a try/catch block. For example:
 
 ```
 try {
-// various SDK commands ..
+	// various SDK commands...
 } catch (\Exception $e) {
-echo ‘Oops! An error occurred. [’, $e->getMessage(), ‘, ’, $e->getCode(), ‘]’;
+	echo ‘Oops! An error occurred. [’, $e->getMessage(), ‘, ’, $e->getCode(), ‘]’;
 }
 
 ```
@@ -327,14 +327,14 @@ echo ‘Oops! An error occurred. [’, $e->getMessage(), ‘, ’, $e->getCode()
 
 `$eFrontProSDK->GetAPI(‘BranchList’)->GetAll();`
 
-***Get information about a branch*.** GetInfo method, accepts a positive
-integer as the branch Id.
+***Get information about a branch*.**
+ GetInfo method, accepts a positive integer as the branch Id.
 
 `$eFrontProSDK->GetAPI(‘Branch’)->GetInfo($branchId);`
 
-***Create a branch*.** Create method, accepts an associative array as
-the branch information to be created. The required information consisted
-of the "name" and "url"; "parent\_ID" and "public\_ID" are optional.
+***Create a branch*.**
+ Create method, accepts an associative array as the branch information to be created. The required information consisted
+ of the `"name"` and `"url";` `"parent_ID"` and `"public_ID"` are optional.
 
 ```
 
@@ -344,9 +344,9 @@ $eFrontProSDK->GetAPI(‘Branch’)->Create([
 
 ```
 
-***Add a user in a branch*.** AddRelation method, accepts 2 parameters
-which both are positive integers. The 1<sup>st</sup> one refers to the
-user’s Id and the 2<sup>nd</sup> to the branch’s Id.
+***Add a user in a branch*.**
+ AddRelation method, accepts 2 parameters which both are positive integers. The 1<sup>st</sup> one refers to the
+ user’s Id and the 2<sup>nd</sup> to the branch’s Id.
 
 
 `$eFrontProSDK->GetAPI(‘BranchUser’)->AddRelation($userId, $branchId);`
@@ -356,8 +356,8 @@ user’s Id and the 2<sup>nd</sup> to the branch’s Id.
 
 `$eFrontProSDK->GetAPI(‘CategoryList’)->GetAll();`
 
-***Get information about a category*.** GetInfo method, accepts a
-positive integer as the category Id.
+***Get information about a category*.**
+ GetInfo method, accepts a positive integer as the category Id.
 
 `$eFrontProSDK->GetAPI(‘Category’)->GetInfo($categoryId);`
 
@@ -365,8 +365,8 @@ positive integer as the category Id.
 
 `$eFrontProSDK->GetAPI(‘CourseList’)->GetAll();`
 
-***Get information about a course*.** GetInfo method, accepts a positive
-integer as the course Id.
+***Get information about a course*.**
+ GetInfo method, accepts a positive integer as the course Id.
 
 `$eFrontProSDK->GetAPI(‘Course’)->GetInfo($courseId);`
 
@@ -378,8 +378,8 @@ integer as the course Id.
 
 `$eFrontProSDK->GetAPI(‘GroupList’)->GetAll();`
 
-***Get information about a group*.** GetInfo method, accepts a positive
-integer as the group Id.
+***Get information about a group*.**
+ GetInfo method, accepts a positive integer as the group Id.
 
 `$eFrontProSDK->GetAPI(‘Group’)->GetInfo($groupId);`
 
@@ -387,13 +387,13 @@ integer as the group Id.
 
 `$eFrontProSDK->GetAPI(‘Plugin’)->GetAll();`
 
-***Get information about a plugin*.** GetInfo method, accepts a string
-as the plugin name.
+***Get information about a plugin*.**
+ GetInfo method, accepts a string as the plugin name.
 
 `$eFrontProSDK->GetAPI(‘Plugin’)->GetInfo($pluginName);`
 
-***Notify the specified plugin by sending some data*.** Notify method,
-accepts a string as the plugin name (1<sup>st</sup> parameter) and an
+***Notify the specified plugin by sending some data*.**
+ Notify method, accepts a string as the plugin name (1<sup>st</sup> parameter) and an
 array (2<sup>nd</sup> parameter) with the custom notification data.
 
 `$eFrontProSDK->GetAPI(‘Plugin’)->Notify($pluginName, $data);`
@@ -402,29 +402,29 @@ array (2<sup>nd</sup> parameter) with the custom notification data.
 
 `$eFrontProSDK->GetAPI(‘UserList’)->GetAll();`
 
-***Get all the users by their e-mail address*.** GetAllByMail method,
-accepts a string as the e-mail address of a user.
+***Get all the users by their e-mail address*.**
+ GetAllByMail method, accepts a string as the e-mail address of a user.
 
 `$eFrontProSDK->GetAPI(‘UserList’)->GetAllByMail($mailAddress);`
 
-***Get information about a user*.** GetInfo method, accepts a positive
-integer as the user Id.
+***Get information about a user*.**
+ GetInfo method, accepts a positive integer as the user Id.
 
 `$eFrontProSDK->GetAPI(‘User’)->GetInfo($userId);`
 
-***Activate a user*.** Activate method, accepts a positive integer as
-the user Id.
+***Activate a user*.**
+ Activate method, accepts a positive integer as the user Id.
 
 `$eFrontProSDK->GetAPI(‘User’)->Activate($userId);`
 
-***Deactivate a user*.** Deactivate method, accepts a positive integer
-as the user Id.
+***Deactivate a user*.**
+ Deactivate method, accepts a positive integer as the user Id.
 
 `$eFrontProSDK->GetAPI(‘User’)->Deactivate($userId);`
 
-***Create a user*.** Create method, accepts an associative array as the
-user’s information to be created. The required information consisted of
-the login, name, surname, email and password fields.
+***Create a user*.**
+ Create method, accepts an associative array as the user’s information to be created. The required information consisted of
+ the login, name, surname, email and password fields.
 
 ```
 
@@ -434,11 +434,12 @@ $eFrontProSDK->GetAPI(‘User’)->Create ([
 
 ```
 
-***Edit a user*.** Edit method, accepts 2 parameters. The 1<sup>st</sup>
-parameter is a positive integer as the user Id and the 2<sup>nd</sup> an
-associative array as the user’s information to be edited. The keys of
-the array are the same as the above method (Create) but aren’t required
-all of them, so you can edit only the information which you want.
+***Edit a user*.**
+ Edit method, accepts 2 parameters. The 1<sup>st</sup>
+ parameter is a positive integer as the user Id and the 2<sup>nd</sup> an
+ associative array as the user’s information to be edited. The keys of
+ the array are the same as the above method (Create) but aren’t required
+ all of them, so you can edit only the information which you want.
 
 ```
 
@@ -448,48 +449,54 @@ $eFrontProSDK->GetAPI(‘User’)->Edit (
 
 ```
 
-***Add a user in a group*.** AddRelation method, accepts 2 parameters
-which both are positive integers. The 1<sup>st</sup> one refers to the
-user’s Id and the 2<sup>nd</sup> to the group’s Id.
+***Add a user in a group*.**
+ AddRelation method, accepts 2 parameters
+ which both are positive integers. The 1<sup>st</sup> one refers to the
+ user’s Id and the 2<sup>nd</sup> to the group’s Id.
 
 
 `$eFrontProSDK->GetAPI(‘UserGroup’)->AddRelation($userId, $groupId);`
 
 
-***Remove a user from a group*.** RemoveRelation method, accepts 2
-parameters which both are positive integers. The 1<sup>st</sup> one
-refers to the user’s Id and the 2<sup>nd</sup> to the group’s Id.
+***Remove a user from a group*.**
+ RemoveRelation method, accepts 2
+ parameters which both are positive integers. The 1<sup>st</sup> one
+ refers to the user’s Id and the 2<sup>nd</sup> to the group’s Id.
 
 `$eFrontProSDK->GetAPI(‘UserGroup’)->RemoveRelation($userId, $groupId);`
 
-***Add a user in a course*.** AddRelation method, accepts 3 parameters
-which. The 1<sup>st</sup> one refers to the user’s Id (positive
-integer), the 2<sup>nd</sup> to the course’s Id (positive integer) and
-3rd to whether you want to force the operation or not, if the requested
-course belongs to a curriculum. The last parameter is set to false by
-default.
+***Add a user in a course*.**
+ AddRelation method, accepts 3 parameters
+ which. The 1<sup>st</sup> one refers to the user’s Id (positive
+ integer), the 2<sup>nd</sup> to the course’s Id (positive integer) and
+ 3rd to whether you want to force the operation or not, if the requested
+ course belongs to a curriculum. The last parameter is set to false by
+ default.
 
 `$eFrontProSDK->GetAPI(‘CourseUser’)->AddRelation($userId, $courseId, $force);`
 
-***Add a user in a curriculum*.** AddRelation method, accepts 3
-parameters which. The 1<sup>st</sup> one refers to the user’s Id
-(positive integer), the 2<sup>nd</sup> to the curriculum’s Id (positive
-integer) and 3rd to whether you want to force the operation or not. The
-last parameter is set to false by default.
+***Add a user in a curriculum*.**
+ AddRelation method, accepts 3
+ parameters which. The 1<sup>st</sup> one refers to the user’s Id
+ (positive integer), the 2<sup>nd</sup> to the curriculum’s Id (positive
+ integer) and 3rd to whether you want to force the operation or not. The
+ last parameter is set to false by default.
 
 `$eFrontProSDK->GetAPI(‘CurriculumUser’)->AddRelation($userId, $curriculumId, $force);`
 
-***Check the status of a user in a course*.** CheckStatus method,
-accepts 2 parameters which both are positive integers. The
-1<sup>st</sup> one refers to the user’s Id and the 2<sup>nd</sup> to the
-course’s Id.
+***Check the status of a user in a course*.**
+ CheckStatus method,
+ accepts 2 parameters which both are positive integers. The
+ 1<sup>st</sup> one refers to the user’s Id and the 2<sup>nd</sup> to the
+ course’s Id.
 
 `$eFrontProSDK->GetAPI(‘CourseUser’)->CheckStatus($userId, $courseId);`
 
-***Update the status of a user in a course*.** UpdateStatus method,
-accepts 3 parameters. The first 2 are positive integers. The
-1<sup>st</sup> one refers to the user’s Id and the 2<sup>nd</sup> to the
-course’s Id. The last is an array which contains the update info.
+***Update the status of a user in a course*.**
+ UpdateStatus method,
+ accepts 3 parameters. The first 2 are positive integers. The
+ 1<sup>st</sup> one refers to the user’s Id and the 2<sup>nd</sup> to the
+ course’s Id. The last is an array which contains the update info.
 
 ```
 
@@ -500,29 +507,31 @@ $eFrontProSDK->GetAPI(‘CourseUser’)->UpdateStatus (
 
 ```
 
-***Remove a user from a course***. RemoveRelation method, accepts 2
-parameters which both are positive integers. The 1<sup>st</sup> one
-refers to the user’s Id and the 2<sup>nd</sup> to the course’s Id.
+***Remove a user from a course*.**
+ RemoveRelation method, accepts 2
+ parameters which both are positive integers. The 1<sup>st</sup> one
+ refers to the user’s Id and the 2<sup>nd</sup> to the course’s Id.
 
 `$eFrontProSDK->GetAPI(‘CourseUser’)->RemoveRelation($userId, $courseId);`
 
-***Remove a user from a curriculum***. RemoveRelation method, accepts 2
-parameters which both are positive integers. The 1<sup>st</sup> one
-refers to the user’s Id and the 2<sup>nd</sup> to the curriculum’s Id.
+***Remove a user from a curriculum*.**
+ RemoveRelation method, accepts 2
+ parameters which both are positive integers. The 1<sup>st</sup> one
+ refers to the user’s Id and the 2<sup>nd</sup> to the curriculum’s Id.
 
 `$eFrontProSDK->GetAPI(‘CurriculumUser’)->RemoveRelation($userId, $curriculumId);`
 
-***Get information about the system***.
+***Get information about the system*.**
 
 `$eFrontProSDK->GetAPI(‘System’)->GetInfo();`
 
-***Autologin a user*.** Autologin method, accepts a string as the user’s
-login name.
+***Autologin a user*.**
+ Autologin method, accepts a string as the user’s login name.
 
 `$eFrontProSDK->GetAPI(‘User’)->AutoLogin($loginName);`
 
-***Logout a user*.** Logout method, accepts a string as the user’s login
-name.
+***Logout a user*.**
+ Logout method, accepts a string as the user’s login name.
 
 `$eFrontProSDK->GetAPI(‘User’)->Logout($loginName);`
 
