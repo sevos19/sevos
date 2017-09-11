@@ -45,7 +45,7 @@ in the following chapters.
 	-   Provide your domain and the API location. In the above example we
 		use the API version 1.0 and request information about the system.
 
-2.  Access through the SDK:
+2.  Access through the SDK: 
 
     `$eFrontProSDK->GetAPI('System')->GetInfo();`
 
