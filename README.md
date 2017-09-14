@@ -9,7 +9,6 @@
 document are to be interpreted as described in *[*RFC
 2119*](http://www.ietf.org/rfc/rfc2119.txt)*.*
 
-***
 
 eFrontPro provides a comprehensive REST JSON API that allows interaction with remote services. 
 Authentication is based on an API key that is defined under your installation’s system settings. 
@@ -23,7 +22,6 @@ available API calls, as well as information on authentication and error handling
 the guide demonstrates the use of the PHP SDK, providing information on setting it up and performing 
 some basic tasks.
 
-***
 <a name="postman"></a>
 You can use [Postman](https://www.getpostman.com/) to test the API. To use it, follow these simple steps:
 
