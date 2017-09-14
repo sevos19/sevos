@@ -1,4 +1,4 @@
-# eFrontPro 4
+# eFrontPro-SDK
 
 ## REST JSON API DOCUMENTATION
 
@@ -10,6 +10,38 @@ document are to be interpreted as described in *[*RFC
 2119*](http://www.ietf.org/rfc/rfc2119.txt)*.*
 
 ***
+
+eFrontPro provides a comprehensive REST JSON API that allows interaction with remote services. 
+Authentication is based on an API key that is defined under your installation’s system settings. 
+The functionality provided focuses on performing tasks meaningful for a remote service, such as 
+user creation, course assignment, listing courses etc. In addition, one can use the API to provide 
+basic SSO for users.
+
+To ease implementation of services, we provide a SDK library for PHP that automates the tasks of 
+communicating with the API. The first part of this guide provides a detailed description of the 
+available API calls, as well as information on authentication and error handling. The second part of 
+the guide demonstrates the use of the PHP SDK, providing information on setting it up and performing 
+some basic tasks.
+
+***
+<a name="postman"></a>
+You can use [Postman](https://www.getpostman.com/) to test the API. To use it, follow these simple steps:
+
+1. Install Postman to your browser.
+2. Sign in as administrator to your eFrontPro's installation and go to admin->system settings->integrations->API
+3. Enable the API and copy the API key to the clipboard
+4. Fire up Postman. Select "Basic Auth" for Authorization and paste the API key in the "Username" field. Leave the "Password" field blank.
+5. Use the URL  of the address you wish to make requests to. For example:
+  1. To get a list of all users, enter the following in the URL section in postman and make a GET request:
+  `http://efrontpro.example.com/API/v1.0/Users`
+  3. To create a user, make a POST request to the following URL:
+  `http://efrontpro.example.com/API/v1.0/User`
+  Use the "Body" section to fill in the key-value pairs of the data you wish to send
+  5. To update a user with id 23, make a PUT request to the following URL with the data required:
+  `PUT http://efrontpro.example.com/API/v1.0/User/23`
+  Use the "Body" section to fill in the key-value pairs of the data you wish to send
+
+  ***
 
 <a name="DocIndex"><h3>Documentation Index</h3></a>
 
@@ -45,7 +77,7 @@ in the following chapters.
 	-   Provide your domain and the API location. In the above example we
 		use the API version 1.0 and request information about the system.
 
-2.  Access through the SDK: 
+2.  Access through the SDK:
 
     `$eFrontProSDK->GetAPI('System')->GetInfo();`
 
@@ -183,7 +215,7 @@ When an error has been occurred you can find into the body of the
 response some other useful information such as its code, a generic
 message and optionally a more technical reason. For a live demonstration
 of the API calls and their responses (succeed and failed) you can use
-this [tool](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en).
+this [tool](#postman).
 
 | ***HTTP Status Code*** | ***Reason***                                                                                          |
 |------------------------|-------------------------------------------------------------------------------------------------------|
