@@ -66,7 +66,9 @@ in the following chapters.
 
 1.  Access through the command line (cURL):
 
-	`curl -u <MY_API_KEY>: http://my-efront-pro.com/API/v1.0/System/Info`
+	```php
+	curl -u <MY_API_KEY>: http://my-efront-pro.com/API/v1.0/System/Info
+	```
 
 	-   Replace &lt;MY\_API\_KEY&gt; with your API key.
 
@@ -77,7 +79,9 @@ in the following chapters.
 
 2.  Access through the SDK:
 
-    `$eFrontProSDK->GetAPI('System')->GetInfo();`
+    ```php
+    $eFrontProSDK->GetAPI('System')->GetInfo();
+    ```
 
 	-   See more on how to initialize $eFrontProSDK, [here](#SdkInstall).
 
