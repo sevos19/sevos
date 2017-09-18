@@ -516,14 +516,18 @@ $eFrontProSDK->GetAPI(‘User’)->Edit (
  which both are positive integers. The 1<sup>st</sup> one refers to the
  user’s Id and the 2<sup>nd</sup> to the group’s Id.
 
-`$eFrontProSDK->GetAPI(‘UserGroup’)->AddRelation($userId, $groupId);`
+```php
+$eFrontProSDK->GetAPI(‘UserGroup’)->AddRelation($userId, $groupId);
+```
 
 ***Remove a user from a group*.**
  `RemoveRelation` method, accepts 2
  parameters which both are positive integers. The 1<sup>st</sup> one
  refers to the user’s Id and the 2<sup>nd</sup> to the group’s Id.
 
-`$eFrontProSDK->GetAPI(‘UserGroup’)->RemoveRelation($userId, $groupId);`
+```php
+$eFrontProSDK->GetAPI(‘UserGroup’)->RemoveRelation($userId, $groupId);
+```
 
 ***Add a user in a course*.**
  `AddRelation` method, accepts 3 parameters
@@ -533,7 +537,9 @@ $eFrontProSDK->GetAPI(‘User’)->Edit (
  course belongs to a curriculum. The last parameter is set to false by
  default.
 
-`$eFrontProSDK->GetAPI(‘CourseUser’)->AddRelation($userId, $courseId, $force);`
+```php
+$eFrontProSDK->GetAPI(‘CourseUser’)->AddRelation($userId, $courseId, $force);
+```
 
 ***Add a user in a curriculum*.**
  `AddRelation` method, accepts 3
@@ -542,7 +548,9 @@ $eFrontProSDK->GetAPI(‘User’)->Edit (
  integer) and 3rd to whether you want to force the operation or not. The
  last parameter is set to false by default.
 
-`$eFrontProSDK->GetAPI(‘CurriculumUser’)->AddRelation($userId, $curriculumId, $force);`
+```php
+$eFrontProSDK->GetAPI(‘CurriculumUser’)->AddRelation($userId, $curriculumId, $force);
+```
 
 ***Check the status of a user in a course*.**
  `CheckStatus` method,
@@ -550,7 +558,9 @@ $eFrontProSDK->GetAPI(‘User’)->Edit (
  1<sup>st</sup> one refers to the user’s Id and the 2<sup>nd</sup> to the
  course’s Id.
 
-`$eFrontProSDK->GetAPI(‘CourseUser’)->CheckStatus($userId, $courseId);`
+```php
+$eFrontProSDK->GetAPI(‘CourseUser’)->CheckStatus($userId, $courseId);
+```
 
 ***Update the status of a user in a course*.**
  `UpdateStatus` method,
@@ -571,28 +581,38 @@ $eFrontProSDK->GetAPI(‘CourseUser’)->UpdateStatus (
  parameters which both are positive integers. The 1<sup>st</sup> one
  refers to the user’s Id and the 2<sup>nd</sup> to the course’s Id.
 
-`$eFrontProSDK->GetAPI(‘CourseUser’)->RemoveRelation($userId, $courseId);`
+```php
+$eFrontProSDK->GetAPI(‘CourseUser’)->RemoveRelation($userId, $courseId);
+```
 
 ***Remove a user from a curriculum*.**
  `RemoveRelation` method, accepts 2
  parameters which both are positive integers. The 1<sup>st</sup> one
  refers to the user’s Id and the 2<sup>nd</sup> to the curriculum’s Id.
 
-`$eFrontProSDK->GetAPI(‘CurriculumUser’)->RemoveRelation($userId, $curriculumId);`
+```php
+$eFrontProSDK->GetAPI(‘CurriculumUser’)->RemoveRelation($userId, $curriculumId);
+```
 
 ***Get information about the system*.**
 
-`$eFrontProSDK->GetAPI(‘System’)->GetInfo();`
+```php
+$eFrontProSDK->GetAPI(‘System’)->GetInfo();
+```
 
 ***Autologin a user*.**
  `Autologin` method, accepts a string as the user’s login name.
 
-`$eFrontProSDK->GetAPI(‘User’)->AutoLogin($loginName);`
+```php
+$eFrontProSDK->GetAPI(‘User’)->AutoLogin($loginName);
+```
 
 ***Logout a user*.**
  `Logout` method, accepts a string as the user’s login name.
 
-`$eFrontProSDK->GetAPI(‘User’)->Logout($loginName);`
+```php
+$eFrontProSDK->GetAPI(‘User’)->Logout($loginName);
+```
 
 ***ADVANCED EXAMPLES***
 
