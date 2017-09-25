@@ -33,7 +33,7 @@ You can use [Postman](https://www.getpostman.com/) to test the API. To use it, f
   1. To get a list of all users, enter the following in the URL section in postman and make a GET request:
   `http://efrontpro.example.com/API/v1.0/Users`
   3. To create a user, make a POST request to the following URL:
-  `http://efrontpro.example.com/API/v1.0/User`
+  `http://efrontpro.example.com/API/v1.0/User` 
   Use the "Body" section to fill in the key-value pairs of the data you wish to send.
   5. To update a user with id 23, make a PUT request to the following URL with the data required:
   `PUT http://efrontpro.example.com/API/v1.0/User/23`
