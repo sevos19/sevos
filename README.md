@@ -9,7 +9,7 @@
 document are to be interpreted as described in *[*RFC
 2119*](http://www.ietf.org/rfc/rfc2119.txt)*.*
   
-
+ 
 eFrontPro provides a comprehensive REST JSON API that allows interaction with remote services. 
 Authentication is based on an API key that is defined under your installation’s system settings. 
 The functionality provided focuses on performing tasks meaningful for a remote service, such as 
